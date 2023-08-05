@@ -10,15 +10,16 @@ return new class() extends Migration {
      */
     public function up(): void
     {
-        Schema::create('banners', function (Blueprint $table) {
+        Schema::create('card_items', function (Blueprint $table) {
             $table->id();
             $table->foreignId('establishment_id')->references('id')->on('establishments');
             $table->string('title');
-            $table->text('description')->nullable();
-            $table->string('image')->nullable();
-            $table->tinyInteger('status')->default(1);
+            $table->text('description');
+            $table->enum('type', ['product', 'offer', 'banner', 'service']);
+            $table->boolean('status')->default(1);
+            $table->boolean('is_featured')->default(0);
+            $table->string('image');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -27,6 +28,6 @@ return new class() extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('banners');
+        Schema::dropIfExists('card_items');
     }
 };

@@ -12,6 +12,7 @@ return new class() extends Migration {
     {
         Schema::create('enquiries', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('establishment_id')->references('id')->on('establishments');
             $table->string('name');
             $table->string('email');
             $table->string('subject');
