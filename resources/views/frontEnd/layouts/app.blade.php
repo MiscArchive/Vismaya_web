@@ -1,5 +1,5 @@
 @include('frontEnd.layouts.header')
-@include('frontEnd.layouts.navbar', ['curriculams' => \App\Models\Curriculum::where('status', 1)->get()])
+@include('frontEnd.layouts.navbar')
 <div class="page-content">
 @yield('content')
 </div>
