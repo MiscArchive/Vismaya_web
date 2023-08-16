@@ -20,6 +20,8 @@ return new class() extends Migration {
             $table->boolean('is_featured')->default(0);
             $table->string('image');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

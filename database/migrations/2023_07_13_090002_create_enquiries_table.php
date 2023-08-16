@@ -19,6 +19,8 @@ return new class() extends Migration {
             $table->string('telephone');
             $table->string('comments');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 
