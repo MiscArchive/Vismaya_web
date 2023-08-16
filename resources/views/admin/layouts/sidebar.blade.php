@@ -29,9 +29,9 @@
             <div id="two-column-menu">
             </div>
             <ul class="navbar-nav mt-5" id="navbar-nav">
-          
-                    
-             
+
+
+
 
                 {{-- <li class="menu-title"><span data-key="t-menu">Menu</span></li> --}}
                 <li class="nav-item">
@@ -40,7 +40,13 @@
                     </a>
                 </li>
 
-                 
+                <li class="nav-item">
+                    <a href="{{ route('establishments.index') }}" class="nav-link menu-link"> <i class="ph-folder-open"></i>
+                        <span data-key="t-file-manager">Establishments</span>
+                    </a>
+                </li>
+
+
 
             </ul>
         </div>
