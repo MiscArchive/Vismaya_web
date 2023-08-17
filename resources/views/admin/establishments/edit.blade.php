@@ -24,7 +24,7 @@
             </div>
 
             <div class="card-body">
-                <form action="{{ route('establishments.update', $establishment->id) }}" enctype="multipart/form-data"
+                <form action="{{ route('branches.update', $branch->id) }}" enctype="multipart/form-data"
                     method="POST">
                     @method('put')
                     @csrf
@@ -86,8 +86,8 @@
                             <div>
                                 <label for="labelInput" class="form-label text-muted">Status</label>
                                 <select class="form-select mb-3" aria-label="Default select example" name="status">
-                                    <option value="1">Active</option>
-                                    <option value="0">In-Active</option>
+                                    <option value="1" @if ($establishment->status == 1) selected @endif>Active</option>
+                                    <option value="0" @if ($establishment->status == 0) selected @endif>In-Active</option>
                                 </select>
                             </div>
                             @if ($errors->has('status'))
