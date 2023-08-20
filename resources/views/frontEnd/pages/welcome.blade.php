@@ -4,111 +4,114 @@
     <!--hero section start-->
     <section id="home">
 
-    <div class="healthcare-hero pt-7 pb-120 overflow-hidden">
-        <div class="container">
-            <div class="row g-5 g-xl-4 align-items-center justify-content-center">
-                <div class="col-xl-12">
-                    <div class="healthcare-hero-slider-box overflow-hidden position-relative">
-                        <div class="healthcare-hero-slider swiper">
-                            <div class="swiper-wrapper">
-                                <div class="healthcare-hero-single swiper-slide bg-white rounded">
-                                    <div class="left-content">
-                                        <div class="d-flex align-items-center gap-1 gap-sm-2 mb-2 flex-wrap">
-                                            <h5 class="mb-0 fw-normal text-primary gshop-subtitle">100% Organic Food Provide
-                                            </h5>
-                                            <span>
-                                                <svg width="138" height="16" viewBox="0 0 138 16" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <line y1="8" x2="132" y2="8" stroke="#4EB529"
-                                                        stroke-width="2" />
-                                                    <path d="M138 8L126 14.9282L126 1.0718L138 8Z" fill="#4EB529" />
-                                                </svg>
-                                            </span>
+        <div class="healthcare-hero pt-7 pb-120 overflow-hidden">
+            <div class="container">
+                <div class="row g-5 g-xl-4 align-items-center justify-content-center">
+                    <div class="col-xl-12">
+                        <div class="healthcare-hero-slider-box overflow-hidden position-relative">
+                            <div class="healthcare-hero-slider swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="healthcare-hero-single swiper-slide bg-white rounded">
+                                        <div class="left-content">
+                                            <div class="d-flex align-items-center gap-1 gap-sm-2 mb-2 flex-wrap">
+                                                <h5 class="mb-0 fw-normal text-primary gshop-subtitle">100% Organic Food
+                                                    Provide
+                                                </h5>
+                                                <span>
+                                                    <svg width="138" height="16" viewBox="0 0 138 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <line y1="8" x2="132" y2="8" stroke="#4EB529"
+                                                            stroke-width="2" />
+                                                        <path d="M138 8L126 14.9282L126 1.0718L138 8Z" fill="#4EB529" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <h1 class="display-4 mb-3">Natural & Organic Health Care</h1>
+                                            <p class="mb-6">Assertively target market-driven intellectual capital with
+                                                worldwide human capital holistic.</p>
+                                            <a href="product-details.html" class="btn btn-primary">Shop Now<span
+                                                    class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
                                         </div>
-                                        <h1 class="display-4 mb-3">Natural & Organic Health Care</h1>
-                                        <p class="mb-6">Assertively target market-driven intellectual capital with
-                                            worldwide human capital holistic.</p>
-                                        <a href="product-details.html" class="btn btn-primary">Shop Now<span
-                                                class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
+                                        <img src="assets/img/products/orange.png" alt="orange"
+                                            class="slide-product img-fluid d-none d-md-block">
+                                        <img src="assets/img/products/orange-slice.png" alt="orange"
+                                            class="slide-product img-fluid d-md-none">
                                     </div>
-                                    <img src="assets/img/products/orange.png" alt="orange"
-                                        class="slide-product img-fluid d-none d-md-block">
-                                    <img src="assets/img/products/orange-slice.png" alt="orange"
-                                        class="slide-product img-fluid d-md-none">
-                                </div>
-                                <div class="healthcare-hero-single swiper-slide bg-white rounded">
-                                    <div class="left-content">
-                                        <div class="d-flex align-items-center gap-1 gap-sm-2 mb-2 flex-wrap">
-                                            <h5 class="mb-0 fw-normal text-primary gshop-subtitle">100% Organic Food Provide
-                                            </h5>
-                                            <span>
-                                                <svg width="138" height="16" viewBox="0 0 138 16" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <line y1="8" x2="132" y2="8" stroke="#4EB529"
-                                                        stroke-width="2" />
-                                                    <path d="M138 8L126 14.9282L126 1.0718L138 8Z" fill="#4EB529" />
-                                                </svg>
-                                            </span>
+                                    <div class="healthcare-hero-single swiper-slide bg-white rounded">
+                                        <div class="left-content">
+                                            <div class="d-flex align-items-center gap-1 gap-sm-2 mb-2 flex-wrap">
+                                                <h5 class="mb-0 fw-normal text-primary gshop-subtitle">100% Organic Food
+                                                    Provide
+                                                </h5>
+                                                <span>
+                                                    <svg width="138" height="16" viewBox="0 0 138 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <line y1="8" x2="132" y2="8" stroke="#4EB529"
+                                                            stroke-width="2" />
+                                                        <path d="M138 8L126 14.9282L126 1.0718L138 8Z" fill="#4EB529" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <h1 class="display-4 mb-3">Natural & Organic Health Care</h1>
+                                            <p class="mb-6">Assertively target market-driven intellectual capital with
+                                                worldwide human capital holistic.</p>
+                                            <a href="product-details.html" class="btn btn-primary">Shop Now<span
+                                                    class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
                                         </div>
-                                        <h1 class="display-4 mb-3">Natural & Organic Health Care</h1>
-                                        <p class="mb-6">Assertively target market-driven intellectual capital with
-                                            worldwide human capital holistic.</p>
-                                        <a href="product-details.html" class="btn btn-primary">Shop Now<span
-                                                class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
+                                        <img src="assets/img/products/orange.png" alt="orange"
+                                            class="slide-product img-fluid d-none d-md-block">
+                                        <img src="assets/img/products/orange-slice.png" alt="orange"
+                                            class="slide-product img-fluid d-md-none">
                                     </div>
-                                    <img src="assets/img/products/orange.png" alt="orange"
-                                        class="slide-product img-fluid d-none d-md-block">
-                                    <img src="assets/img/products/orange-slice.png" alt="orange"
-                                        class="slide-product img-fluid d-md-none">
-                                </div>
-                                <div class="healthcare-hero-single swiper-slide bg-white rounded">
-                                    <div class="left-content">
-                                        <div class="d-flex align-items-center gap-1 gap-sm-2 mb-2 flex-wrap">
-                                            <h5 class="mb-0 fw-normal text-primary gshop-subtitle">100% Organic Food Provide
-                                            </h5>
-                                            <span>
-                                                <svg width="138" height="16" viewBox="0 0 138 16" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <line y1="8" x2="132" y2="8" stroke="#4EB529"
-                                                        stroke-width="2" />
-                                                    <path d="M138 8L126 14.9282L126 1.0718L138 8Z" fill="#4EB529" />
-                                                </svg>
-                                            </span>
+                                    <div class="healthcare-hero-single swiper-slide bg-white rounded">
+                                        <div class="left-content">
+                                            <div class="d-flex align-items-center gap-1 gap-sm-2 mb-2 flex-wrap">
+                                                <h5 class="mb-0 fw-normal text-primary gshop-subtitle">100% Organic Food
+                                                    Provide
+                                                </h5>
+                                                <span>
+                                                    <svg width="138" height="16" viewBox="0 0 138 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <line y1="8" x2="132" y2="8" stroke="#4EB529"
+                                                            stroke-width="2" />
+                                                        <path d="M138 8L126 14.9282L126 1.0718L138 8Z" fill="#4EB529" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <h1 class="display-4 mb-3">Natural & Organic Health Care</h1>
+                                            <p class="mb-6">Assertively target market-driven intellectual capital with
+                                                worldwide human capital holistic.</p>
+                                            <a href="product-details.html" class="btn btn-primary">Shop Now<span
+                                                    class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
                                         </div>
-                                        <h1 class="display-4 mb-3">Natural & Organic Health Care</h1>
-                                        <p class="mb-6">Assertively target market-driven intellectual capital with
-                                            worldwide human capital holistic.</p>
-                                        <a href="product-details.html" class="btn btn-primary">Shop Now<span
-                                                class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
+                                        <img src="assets/img/products/orange.png" alt="orange"
+                                            class="slide-product img-fluid d-none d-md-block">
+                                        <img src="assets/img/products/orange-slice.png" alt="orange"
+                                            class="slide-product img-fluid d-md-none">
                                     </div>
-                                    <img src="assets/img/products/orange.png" alt="orange"
-                                        class="slide-product img-fluid d-none d-md-block">
-                                    <img src="assets/img/products/orange-slice.png" alt="orange"
-                                        class="slide-product img-fluid d-md-none">
                                 </div>
                             </div>
-                        </div>
-                        <div class="healthcare-hero-thumbnail-slider swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide thumbnail-single">
-                                    <img src="assets/img/home-3/thumbnail-1.png" alt="thumbnail"
-                                        class="img-fluid rounded-circle">
-                                </div>
-                                <div class="swiper-slide thumbnail-single">
-                                    <img src="assets/img/home-3/thumbnail-1.png" alt="thumbnail"
-                                        class="img-fluid rounded-circle">
-                                </div>
-                                <div class="swiper-slide thumbnail-single">
-                                    <img src="assets/img/home-3/thumbnail-1.png" alt="thumbnail"
-                                        class="img-fluid rounded-circle">
+                            <div class="healthcare-hero-thumbnail-slider swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide thumbnail-single">
+                                        <img src="assets/img/home-3/thumbnail-1.png" alt="thumbnail"
+                                            class="img-fluid rounded-circle">
+                                    </div>
+                                    <div class="swiper-slide thumbnail-single">
+                                        <img src="assets/img/home-3/thumbnail-1.png" alt="thumbnail"
+                                            class="img-fluid rounded-circle">
+                                    </div>
+                                    <div class="swiper-slide thumbnail-single">
+                                        <img src="assets/img/home-3/thumbnail-1.png" alt="thumbnail"
+                                            class="img-fluid rounded-circle">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div> <!--hero section end-->
+        </div> <!--hero section end-->
     </section>
     <!--category section start-->
     <section id="about-us">
@@ -145,90 +148,67 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center g-4 mt-4">
-                    <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                        <div
-                            class="gshop-animated-iconbox py-5 px-4 text-center border rounded-3 position-relative overflow-hidden hover-shadow">
-                            <div
-                                class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
-                                <img src="assets/img/category/vegetable.png" alt="flower" class="img-fluid">
-                            </div>
-                            <a href="http://vismaya_web.test/branch"
-                                class="text-dark fs-sm fw-bold d-block mt-3">Vegetable</a>
-                            <span class="total-count position-relative ps-3 fs-sm fw-medium doted-primary">25 Items</span>
-                            <a href="http://vismaya_web.test/branch" class="explore-btn position-absolute"><i
-                                    class="fa-solid fa-arrow-up"></i></a>
-                        </div>
-                    </div>
 
 
+                <div class="container mt-4">
+                    <div class="row justify-content-center g-4 mt-4">
+                        <div class="col-12">
+                            <div class="popular-category">
+                                @if (filled($establishments))
+                                    @foreach ($establishments as $index => $establishment)
+                                    <div class="popular-category__item {{ $index == 1 ? 'active' : '' }}" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                                        <div class="popular-category__container">
+                                            <div class="popular-category__img">
+                                                <img src="{{ asset('uploads/'.$establishment->logo) }}" alt="image" class="img-fluid">
+                                            </div>
+                                            <div class="popular-category__content">
+                                                <h5 class="popular-category__content-title">{{ $establishment->name }}</h5>
+                                            </div>
+                                            <div class="popular-category__overlay">
+                                                <h5 class="popular-category__overlay-title">{{ $establishment->name }}</h5>
+                                                <p class="popular-category__overlay-para">
+                                                    {{ Str::limit(strip_tags($establishment->description), 150) }}
+                                                </p>
+                                                <a href="#" class="popular-category__overlay-btn">
+                                                    <img src="assets/img/home-6/icon-arrow.png" alt="image" class="img-fluid">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                @endif
 
-                    <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                        <div
-                            class="gshop-animated-iconbox py-5 px-4 text-center border rounded-3 position-relative overflow-hidden color-2  hover-shadow">
-                            <div
-                                class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
-                                <img src="assets/img/category/fresh-fruits.png" alt="flower" class="img-fluid">
                             </div>
-                            <a href="shop-grid.html" class="text-dark fs-sm fw-bold d-block mt-3">Fresh Fruits</a>
-                            <span class="total-count position-relative ps-3 fs-sm fw-medium doted-primary">25 Items</span>
-                            <a href="shop-grid.html" class="explore-btn position-absolute"><i
-                                    class="fa-solid fa-arrow-up"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                        <div
-                            class="gshop-animated-iconbox py-5 px-4 text-center border rounded-3 position-relative overflow-hidden color-3 hover-shadow">
-                            <div
-                                class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
-                                <img src="assets/img/category/milk.png" alt="flower" class="img-fluid">
-                            </div>
-                            <a href="shop-grid.html" class="text-dark fs-sm fw-bold d-block mt-3">Milk &amp; Dairy</a>
-                            <span class="total-count position-relative ps-3 fs-sm fw-medium doted-primary">25 Items</span>
-                            <a href="shop-grid.html" class="explore-btn position-absolute"><i
-                                    class="fa-solid fa-arrow-up"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                        <div
-                            class="gshop-animated-iconbox py-5 px-4 text-center border rounded-3 position-relative overflow-hidden color-4 hover-shadow">
-                            <div
-                                class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
-                                <img src="assets/img/category/coffee-drinks.png" alt="flower" class="img-fluid">
-                            </div>
-                            <a href="shop-grid.html" class="text-dark fs-sm fw-bold d-block mt-3">Coffee &amp; Drinks</a>
-                            <span class="total-count position-relative ps-3 fs-sm fw-medium doted-primary">25 Items</span>
-                            <a href="shop-grid.html" class="explore-btn position-absolute"><i
-                                    class="fa-solid fa-arrow-up"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                        <div
-                            class="gshop-animated-iconbox py-5 px-4 text-center border rounded-3 position-relative overflow-hidden color-5 hover-shadow">
-                            <div
-                                class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
-                                <img src="assets/img/category/meat.png" alt="flower" class="img-fluid">
-                            </div>
-                            <a href="shop-grid.html" class="text-dark fs-sm fw-bold d-block mt-3">Meat</a>
-                            <span class="total-count position-relative ps-3 fs-sm fw-medium doted-primary">25 Items</span>
-                            <a href="shop-grid.html" class="explore-btn position-absolute"><i
-                                    class="fa-solid fa-arrow-up"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                        <div
-                            class="gshop-animated-iconbox py-5 px-4 text-center border rounded-3 position-relative overflow-hidden color-3 hover-shadow">
-                            <div
-                                class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
-                                <img src="assets/img/category/cleaning.png" alt="flower" class="img-fluid">
-                            </div>
-                            <a href="shop-grid.html" class="text-dark fs-sm fw-bold d-block mt-3">Cleaning Essential</a>
-                            <span class="total-count position-relative ps-3 fs-sm fw-medium doted-primary">25 Items</span>
-                            <a href="shop-grid.html" class="explore-btn position-absolute"><i
-                                    class="fa-solid fa-arrow-up"></i></a>
                         </div>
                     </div>
                 </div>
+
+
+
+
+
+{{--
+                <div class="row justify-content-center g-4 mt-4">
+                    @if (filled($establishments))
+                        @foreach ($establishments as $establishment)
+                            <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
+                                <div
+                                    class="gshop-animated-iconbox py-5 px-4 text-center border rounded-3 position-relative overflow-hidden hover-shadow">
+                                    <div
+                                        class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
+                                        <img src="assets/img/category/vegetable.png" alt="flower" class="img-fluid">
+                                    </div>
+                                    <a href="http://vismaya_web.test/branch"
+                                        class="text-dark fs-sm fw-bold d-block mt-3">{{ $establishment->name }}</a>
+
+                                    <a href="http://vismaya_web.test/branch" class="explore-btn position-absolute"><i
+                                            class="fa-solid fa-arrow-up"></i></a>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
+
+                </div> --}}
 
             </div>
         </div>
@@ -480,7 +460,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-md rounded-1 mt-6 float-end">Send Message</button>
+                            <button type="submit" class="btn btn-primary btn-md rounded-1 mt-6 float-end">Send
+                                Message</button>
                         </form>
                     </div>
                 </div>
@@ -488,4 +469,3 @@
         </div>
     </section>
 @endsection
-
