@@ -74,6 +74,11 @@
                         <span data-key="t-file-manager">Card Items</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('enquiry.index') }}" class="nav-link menu-link"> <i class="ph-phone-call"></i>
+                        <span data-key="t-file-manager">Enquiries</span>
+                    </a>
+                </li>
 
 
 

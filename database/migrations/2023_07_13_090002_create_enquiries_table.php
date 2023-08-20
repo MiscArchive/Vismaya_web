@@ -12,15 +12,14 @@ return new class() extends Migration {
     {
         Schema::create('enquiries', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('establishment_id')->references('id')->on('establishments');
+            $table->foreignId('establishment_id')->nullable()->references('id')->on('establishments');
             $table->string('name');
-            $table->string('email');
-            $table->string('subject');
-            $table->string('telephone');
+            $table->string('email')->nullable();
+            $table->string('subject')->nullable();
+            $table->string('telephone')->nullable();
             $table->string('comments');
             $table->timestamps();
             $table->softDeletes();
-
         });
     }
 
