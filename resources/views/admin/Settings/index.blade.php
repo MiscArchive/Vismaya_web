@@ -7,25 +7,33 @@
         <div class="card" style="margin-bottom:100px; min-height: 60vh;">
 
             <div class="card">
-                @if ($message = Session::get('success'))
-                    <div class="alert alert-success alert-dismissible alert-label-icon rounded-label fade show"
-                        role="alert">
-                        <i class="ri-check-double-line label-icon"></i><strong>{{ $message }}</strong>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                <div class="alert alert-success alert-dismissible alert-label-icon rounded-label fade show" role="alert"
-                    id="successMessage" style="display: none;">
-                    <i class="ri-check-double-line label-icon"></i><strong></strong>
+                @if (Session::has('success'))
+                <div class="alert alert-success alert-dismissible alert-label-icon rounded-label fade show" role="alert">
+                    <i class="ri-check-double-line label-icon"></i><strong>{{ Session::get('success') }}</strong>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-                @if ($message = Session::get('error'))
-                    <div class="alert alert-danger alert-dismissible alert-label-icon rounded-label fade show"
-                        role="alert">
-                        <i class="ri-error-warning-line label-icon"></i><strong>{{ $message }}</strong <button
-                            type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
+            @endif
+            
+            <div class="alert alert-success alert-dismissible alert-label-icon rounded-label fade show" role="alert"
+                id="successMessage" style="display: none;">
+                <i class="ri-check-double-line label-icon"></i><strong></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            
+            @if (Session::has('error') || Session::has('showPasswordSection'))
+                <div class="alert alert-danger alert-dismissible alert-label-icon rounded-label fade show" role="alert">
+                    <i class="ri-error-warning-line label-icon"></i><strong>
+                        @if (Session::has('error'))
+                            {{ Session::get('error') }}
+                        @endif
+                        @if (Session::has('showPasswordSection'))
+                            {{ __('Current password is incorrect.') }}
+                        @endif
+                    </strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            
                 <div class="card-body">
                     <div class="row align-items-center ">
                         <div class="col-xxl-3 col-lg-6 me-auto">
@@ -240,3 +248,19 @@
         </div>
     </div>
 @endsection
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const passwordInputs = document.querySelectorAll(".password-input");
+        const eyeButtons = document.querySelectorAll(".password-addon");
+
+        eyeButtons.forEach((button, index) => {
+            button.addEventListener("click", function() {
+                if (passwordInputs[index].type === "password") {
+                    passwordInputs[index].type = "text";
+                } else {
+                    passwordInputs[index].type = "password";
+                }
+            });
+        });
+    });
+</script>
