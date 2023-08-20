@@ -429,16 +429,10 @@
                         <form class="contact-form ps-5 ps-xl-4 py-6 pe-6" action="#">
                             <h5 class="mb-6">Make An Enquiry? Send Message</h5>
                             <div class="row g-4">
-                                <div class="col-sm-6">
+                                <div class="col-sm-12">
                                     <div class="label-input-field">
-                                        <label>First Name</label>
+                                        <label>Full Name</label>
                                         <input type="text" placeholder="Saiful">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="label-input-field">
-                                        <label>Last Name</label>
-                                        <input type="text" placeholder="Talukdar">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
