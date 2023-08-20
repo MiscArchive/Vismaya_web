@@ -73,7 +73,7 @@
                             <div class="gshop-navbar-right d-flex align-items-center justify-content-end position-relative"
                                 style="padding-top: 20px;padding-bottom: 20px;">
                                 <div class="category-dropdown position-relative d-none d-md-inline-block">
-                                    <a href="javascript:void(0)"
+                                    <a href={{route('welcomePage')}}
                                         class="category-dropdown-btn fw-bold d-none d-sm-inline-block">Home<span
                                             class="ms-1"></a>
 
