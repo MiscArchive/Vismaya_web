@@ -22,7 +22,7 @@ class CreateEstablishmentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required'],
+            'name' => ['required','unique:establishments,name'],
             'description' => ['required'],
             'logo' => ['nullable','mimes:png,jpg,jpeg'],
             'logo_small' => ['nullable','mimes:png,jpg,jpeg'],

@@ -30,6 +30,37 @@
     body {
         overflow-x: hidden;
     }
+
+    /* Add this CSS to your existing styles */
+    /* Adjust the existing styles as needed */
+
+    /* Add this CSS to your existing styles */
+    .popular-category__item {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .popular-category__overlay {
+        /* Position the overlay absolutely to cover the entire item */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        /* Adjust opacity and color as needed */
+        color: white;
+        padding: 20px;
+        transform: translateY(100%);
+        /* Move the overlay out of sight initially */
+        transition: transform 0.3s ease;
+        /* Add smooth transition animation */
+    }
+
+    .popular-category__item:hover .popular-category__overlay {
+        transform: translateY(0);
+        /* Move the overlay into view on hover */
+    }
 </style>
 
 <body>

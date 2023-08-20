@@ -86,7 +86,8 @@
                                         class="category-dropdown-btn fw-bold d-none d-sm-inline-block">About Us<span
                                             class="ms-1"></a>
                                     <a href="#branches"
-                                        class="category-dropdown-btn fw-bold d-none d-sm-inline-block">Branches<span
+                                        class="category-dropdown-btn fw-bold d-none d-sm-inline-block">Our Ventures
+                                        <span
                                             class="ms-1"></a>
                                     <a href="#testimonials"
                                         class="category-dropdown-btn fw-bold d-none d-sm-inline-block">Testimonials<span
