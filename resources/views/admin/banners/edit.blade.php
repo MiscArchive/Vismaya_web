@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 
 @section('content')
     <div class="container-fluid">
@@ -24,12 +24,26 @@
             </div>
 
             <div class="card-body">
-                <form action="{{ route('banners.update', $banner->id) }}" enctype="multipart/form-data"
-                    method="POST">
+                <form action="{{ route('banners.update', $banner->id) }}" enctype="multipart/form-data" method="POST">
                     @method('put')
                     @csrf
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
+                            <label for="title" class="form-label text-muted">Establishment</label>
+                            <select class="form-select mb-3" name="establishment_id">
+                                <option selected disabled>Choose</option>
+                                @foreach ($establishments as $establishment)
+                                    <option value="{{ $establishment->id }}"
+                                        @if ($establishment->id == $banner->establishment_id) selected @endif>{{ $establishment->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @if ($errors->has('establishment_id'))
+                                <span class="text-danger">{{ $errors->first('establishment_id') }}</span>
+                            @endif
+                        </div>
+
+                        <div class="col-md-6">
                             <div>
                                 <label for="title" class="form-label text-muted">Title</label>
                                 <input type="text" class="form-control" id="title" name="title"
@@ -55,6 +69,9 @@
                             @if ($banner->image)
                                 <img src="{{ asset('uploads/' . $banner->image) }}" alt=""
                                     class="rounded avatar-md mt-2">
+                            @endif
+                            @if ($errors->has('image'))
+                                <span class="text-danger">{{ $errors->first('image') }}</span>
                             @endif
                         </div>
 

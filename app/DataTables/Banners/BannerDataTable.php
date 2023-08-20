@@ -21,6 +21,9 @@ class BannerDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addIndexColumn()
+            ->editColumn('establishment_id', function ($query) {
+                return $query->establishment ? $query->establishment->name : '';
+            })
             ->editColumn('image', function ($query) {
                 return $query->image ? '<img src="'.asset('uploads/'.$query->image).'" alt="" class="rounded avatar-sm">' : '';
             })
@@ -43,7 +46,7 @@ class BannerDataTable extends DataTable
 
                 return $editBtn.$deleteBtn;
             })
-            ->rawColumns(['image', 'actions', 'description', 'status']);
+            ->rawColumns(['image', 'actions', 'description', 'status','establishment_id']);
     }
 
     /**
@@ -51,7 +54,7 @@ class BannerDataTable extends DataTable
      */
     public function query(Banner $model): QueryBuilder
     {
-        return $model->newQuery();
+        return $model->newQuery()->with('establishment');
     }
 
     /**
@@ -95,16 +98,16 @@ class BannerDataTable extends DataTable
                 'data' => 'DT_RowIndex',
             ],
             [
+                'name' => 'establishment_id',
+                'title' => 'Establishment',
+                'className' => 'text-center',
+                'data' => 'establishment_id',
+            ],
+            [
                 'name' => 'title',
                 'title' => 'Title',
                 'className' => 'text-center',
                 'data' => 'title',
-            ],
-            [
-                'name' => 'description',
-                'title' => 'Description',
-                'className' => 'text-center',
-                'data' => 'description',
             ],
             [
                 'name' => 'image',

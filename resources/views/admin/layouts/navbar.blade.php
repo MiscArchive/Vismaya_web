@@ -39,9 +39,10 @@
 
               <div class="d-flex align-items-center">
 
-                 
-                       
-                  <div class="ms-1 header-item d-none d-sm-flex">
+
+                <a href="{{ '/' }}" class="btn btn-outline-secondary btn-sm" target="_blank">Website</a>
+
+                  {{-- <div class="ms-1 header-item d-none d-sm-flex">
                       <button type="button" class="btn btn-icon btn-topbar btn-ghost-dark rounded-circle"
                           data-toggle="fullscreen">
                           <i class='bi bi-arrows-fullscreen fs-lg'></i>
@@ -62,26 +63,25 @@
                           <a href="#!" class="dropdown-item" data-mode="auto"><i
                                   class="bi bi-moon-stars align-middle me-2"></i> Auto (system default)</a>
                       </div>
-                  </div>
+                  </div> --}}
 
-                  
+
 
                   <div class="dropdown ms-sm-3 header-item topbar-user">
                       <button type="button" class="btn shadow-none" id="page-header-user-dropdown"
                           data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <span class="d-flex align-items-center">
                               <img class="rounded-circle header-profile-user"
-                                  src="{{asset('assets/images/users/32/avatar-1.jpg')}}" alt="Header Avatar">
+                                  src="{{asset('assets/images/users/avatar-1.png')}}" alt="Header Avatar">
                               <span class="text-start ms-xl-2">
-                                  <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">Richard
-                                      Marshall</span>
-                                  <span class="d-none d-xl-block ms-1 fs-sm user-name-sub-text">Founder</span>
+                                  <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">{{ auth()->user()->name }}</span>
+                                  <span class="d-none d-xl-block ms-1 fs-sm user-name-sub-text"></span>
                               </span>
                           </span>
                       </button>
                       <div class="dropdown-menu dropdown-menu-end">
                           <!-- item-->
-                          <h6 class="dropdown-header">Welcome Richard!</h6>
+                          <h6 class="dropdown-header">Welcome {{ auth()->user()->name }}</h6>
                           <a class="dropdown-item" href="pages-profile.html"><i
                                   class="mdi mdi-account-circle text-muted fs-lg align-middle me-1"></i> <span
                                   class="align-middle">Profile</span></a>
@@ -92,8 +92,8 @@
                           <a class="dropdown-item" onclick="submitForm()"><i
                                   class="mdi mdi-logout text-muted fs-lg align-middle me-1"></i> <span
                                   class="align-middle" data-key="t-logout">Logout</span></a>
-                                  
-                           
+
+
                       </div>
                   </div>
               </div>
@@ -102,12 +102,12 @@
   </header>
 
 
-  
-  
+
+
         <!-- ============================================================== -->
         <!-- Start right Content here -->
         <!-- ============================================================== -->
         <div class="main-content">
 
             <div class="page-content">
-                
+

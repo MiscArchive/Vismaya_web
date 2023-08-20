@@ -30,13 +30,13 @@
                             <label for="title" class="form-label text-muted">Establishment</label>
                             <select class="form-select mb-3" name="establishment_id">
                                 <option selected disabled>Choose</option>
-                                    @foreach ( $establishments as $establishment )
-                                        <option value="{{ $establishment->id }}">{{ $establishment->name }}</option>
-                                    @endforeach
+                                @foreach ($establishments as $establishment)
+                                    <option value="{{ $establishment->id }}">{{ $establishment->name }}</option>
+                                @endforeach
                             </select>
                             @if ($errors->has('establishment_id'))
-                            <span class="text-danger">{{ $errors->first('establishment_id') }}</span>
-                        @endif
+                                <span class="text-danger">{{ $errors->first('establishment_id') }}</span>
+                            @endif
                         </div>
 
                         <div class="col-md-6">
@@ -82,17 +82,17 @@
                         </div>
                     </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <div>
-                            <label for="location_link" class="form-label text-muted">Address</label>
-                            <textarea class="form-control" id="address" rows="3" name="address"></textarea>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div>
+                                <label for="location_link" class="form-label text-muted">Address</label>
+                                <textarea class="form-control" id="address" rows="3" name="address"></textarea>
+                            </div>
+                            @if ($errors->has('address'))
+                                <span class="text-danger">{{ $errors->first('address') }}</span>
+                            @endif
                         </div>
-                        @if ($errors->has('address'))
-                            <span class="text-danger">{{ $errors->first('address') }}</span>
-                        @endif
                     </div>
-                </div>
 
                     <div class="row mt-3">
                         <div class="col-md-12">

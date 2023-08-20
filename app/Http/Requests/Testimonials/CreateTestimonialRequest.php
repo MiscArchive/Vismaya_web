@@ -22,11 +22,12 @@ class CreateTestimonialRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'establishment_id' => ['required'],
             'title' => ['nullable'],
             'description' => ['required'],
             'author' => ['nullable'],
             'status' => ['nullable'],
-            'image' => ['nullable','mimes:png,jpg,jpeg'],
+            'image' => ['nullable', 'mimes:png,jpg,jpeg'],
         ];
     }
 }

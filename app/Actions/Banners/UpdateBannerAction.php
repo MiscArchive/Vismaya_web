@@ -11,6 +11,7 @@ class UpdateBannerAction
     public function execute(Collection $collection, Banner $banner)
     {
         try {
+            $banner->establishment_id = $collection->get('establishment_id');
             $banner->title = $collection->get('title');
             $banner->description = $collection->get('description');
             $banner->status = $collection->get('status');

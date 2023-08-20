@@ -8,6 +8,7 @@ use App\DataTables\Banners\BannerDataTable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Banner\CreateBannerRequest;
 use App\Models\Banner;
+use App\Models\Establishment;
 
 class BannersController extends Controller
 {
@@ -18,7 +19,8 @@ class BannersController extends Controller
 
     public function create()
     {
-        return view('admin.banners.create');
+        $establishments = Establishment::active()->get();
+        return view('admin.banners.create', compact('establishments'));
     }
 
     public function store(CreateBannerRequest $request, CreateBannerAction $createBannerAction)
@@ -38,7 +40,8 @@ class BannersController extends Controller
 
     public function edit(Banner $banner)
     {
-        return view('admin.banners.edit', compact('banner'));
+        $establishments = Establishment::active()->get();
+        return view('admin.banners.edit', compact(['banner', 'establishments']));
     }
 
     public function update(Banner $banner, UpdateBannerAction $updatebannerAction, CreateBannerRequest $request)
