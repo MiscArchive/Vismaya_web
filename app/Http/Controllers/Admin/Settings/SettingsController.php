@@ -15,6 +15,7 @@ class SettingsController extends Controller
     public function settings()
     {
         $settings = Setting::first();
+
         return view('admin.Settings.index', compact('settings'));
     }
 
@@ -45,6 +46,10 @@ class SettingsController extends Controller
                 return redirect()->route('settings')->with('success', 'Password changed successfully.');
             }
 
-            return back()->withErrors(['current_password' => 'Current password is incorrect.']);
+            return back()
+            ->withErrors(['current_password' => 'Current password is incorrect.'])
+            ->withInput()
+            ->with('showPasswordSection', true);
+        
         }
 }
