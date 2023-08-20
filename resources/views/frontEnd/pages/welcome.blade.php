@@ -11,100 +11,50 @@
                         <div class="healthcare-hero-slider-box overflow-hidden position-relative">
                             <div class="healthcare-hero-slider swiper">
                                 <div class="swiper-wrapper">
-                                    <div class="healthcare-hero-single swiper-slide bg-white rounded">
-                                        <div class="left-content">
-                                            <div class="d-flex align-items-center gap-1 gap-sm-2 mb-2 flex-wrap">
-                                                <h5 class="mb-0 fw-normal text-primary gshop-subtitle">100% Organic Food
-                                                    Provide
-                                                </h5>
-                                                <span>
-                                                    <svg width="138" height="16" viewBox="0 0 138 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <line y1="8" x2="132" y2="8" stroke="#4EB529"
-                                                            stroke-width="2" />
-                                                        <path d="M138 8L126 14.9282L126 1.0718L138 8Z" fill="#4EB529" />
-                                                    </svg>
-                                                </span>
+
+                                    @foreach ($banners as $banner)
+                                        <div class="healthcare-hero-single swiper-slide bg-white rounded">
+                                            <div class="left-content">
+                                                <div class="d-flex align-items-center gap-1 gap-sm-2 mb-2 flex-wrap">
+                                                    <h5 class="mb-0 fw-normal text-primary gshop-subtitle">Vismaya Ventures
+                                                        at Your Service
+                                                    </h5>
+                                                    <span>
+                                                        <svg width="138" height="16" viewBox="0 0 138 16"
+                                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <line y1="8" x2="132" y2="8"
+                                                                stroke="#4EB529" stroke-width="2" />
+                                                            <path d="M138 8L126 14.9282L126 1.0718L138 8Z" fill="#4EB529" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <h1 class="display-4 mb-3">{{ $banner->establishment->name }}</h1>
+                                                <p class="mb-6">
+                                                    {{ Str::limit(strip_tags($banner->establishment->description), 150) }}
+                                                </p>
+                                                <a href="{{ route('establishment', $banner->establishment->slug) }}"
+                                                    class="btn btn-primary">Explore More<span class="ms-2"><i
+                                                            class="fas fa-arrow-right"></i></span></a>
                                             </div>
-                                            <h1 class="display-4 mb-3">Natural & Organic Health Care</h1>
-                                            <p class="mb-6">Assertively target market-driven intellectual capital with
-                                                worldwide human capital holistic.</p>
-                                            <a href="product-details.html" class="btn btn-primary">Shop Now<span
-                                                    class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
+                                            <img src="{{ asset('uploads/' . $banner->image) }}" alt="banner"
+                                                class="slide-product img-fluid d-none d-md-block">
+                                            {{-- <img src="assets/img/products/orange-slice.png" alt="orange"
+                                                class="slide-product img-fluid d-md-none"> --}}
                                         </div>
-                                        <img src="assets/img/products/orange.png" alt="orange"
-                                            class="slide-product img-fluid d-none d-md-block">
-                                        <img src="assets/img/products/orange-slice.png" alt="orange"
-                                            class="slide-product img-fluid d-md-none">
-                                    </div>
-                                    <div class="healthcare-hero-single swiper-slide bg-white rounded">
-                                        <div class="left-content">
-                                            <div class="d-flex align-items-center gap-1 gap-sm-2 mb-2 flex-wrap">
-                                                <h5 class="mb-0 fw-normal text-primary gshop-subtitle">100% Organic Food
-                                                    Provide
-                                                </h5>
-                                                <span>
-                                                    <svg width="138" height="16" viewBox="0 0 138 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <line y1="8" x2="132" y2="8" stroke="#4EB529"
-                                                            stroke-width="2" />
-                                                        <path d="M138 8L126 14.9282L126 1.0718L138 8Z" fill="#4EB529" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <h1 class="display-4 mb-3">Natural & Organic Health Care</h1>
-                                            <p class="mb-6">Assertively target market-driven intellectual capital with
-                                                worldwide human capital holistic.</p>
-                                            <a href="product-details.html" class="btn btn-primary">Shop Now<span
-                                                    class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                        <img src="assets/img/products/orange.png" alt="orange"
-                                            class="slide-product img-fluid d-none d-md-block">
-                                        <img src="assets/img/products/orange-slice.png" alt="orange"
-                                            class="slide-product img-fluid d-md-none">
-                                    </div>
-                                    <div class="healthcare-hero-single swiper-slide bg-white rounded">
-                                        <div class="left-content">
-                                            <div class="d-flex align-items-center gap-1 gap-sm-2 mb-2 flex-wrap">
-                                                <h5 class="mb-0 fw-normal text-primary gshop-subtitle">100% Organic Food
-                                                    Provide
-                                                </h5>
-                                                <span>
-                                                    <svg width="138" height="16" viewBox="0 0 138 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <line y1="8" x2="132" y2="8" stroke="#4EB529"
-                                                            stroke-width="2" />
-                                                        <path d="M138 8L126 14.9282L126 1.0718L138 8Z" fill="#4EB529" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <h1 class="display-4 mb-3">Natural & Organic Health Care</h1>
-                                            <p class="mb-6">Assertively target market-driven intellectual capital with
-                                                worldwide human capital holistic.</p>
-                                            <a href="product-details.html" class="btn btn-primary">Shop Now<span
-                                                    class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                        <img src="assets/img/products/orange.png" alt="orange"
-                                            class="slide-product img-fluid d-none d-md-block">
-                                        <img src="assets/img/products/orange-slice.png" alt="orange"
-                                            class="slide-product img-fluid d-md-none">
-                                    </div>
+                                    @endforeach
+
+
+
                                 </div>
                             </div>
                             <div class="healthcare-hero-thumbnail-slider swiper">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide thumbnail-single">
-                                        <img src="assets/img/home-3/thumbnail-1.png" alt="thumbnail"
-                                            class="img-fluid rounded-circle">
-                                    </div>
-                                    <div class="swiper-slide thumbnail-single">
-                                        <img src="assets/img/home-3/thumbnail-1.png" alt="thumbnail"
-                                            class="img-fluid rounded-circle">
-                                    </div>
-                                    <div class="swiper-slide thumbnail-single">
-                                        <img src="assets/img/home-3/thumbnail-1.png" alt="thumbnail"
-                                            class="img-fluid rounded-circle">
-                                    </div>
+                                    @foreach ($establishments as $establishment)
+                                        <div class="swiper-slide thumbnail-single">
+                                            <img src="{{ asset('uploads/' . $establishment->logo) }}" alt="thumbnail"
+                                                class="img-fluid rounded-circle">
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -141,10 +91,12 @@
         <div class="category-section pt-10">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-xl-6">
+                    <div class="col-xl-8">
                         <div class="section-title text-center">
-                            <h2 class="mb-2">Branches</h2>
-                            <p class="mb-0">Sticky niche markets via goal-oriented networks Completely recaptiualize</p>
+                            <h2 class="mb-2">Our Ventures</h2>
+                            <p class="mb-0">Welcome to the world of Vismaya Ventures, where innovation meets passion. Our
+                                group is a tapestry of diverse businesses, each woven with the threads of excellence and
+                                uniqueness. </p>
                         </div>
                     </div>
                 </div>
@@ -156,25 +108,31 @@
                             <div class="popular-category">
                                 @if (filled($establishments))
                                     @foreach ($establishments as $index => $establishment)
-                                    <div class="popular-category__item {{ $index == 1 ? 'active' : '' }}" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-                                        <div class="popular-category__container">
-                                            <div class="popular-category__img">
-                                                <img src="{{ asset('uploads/'.$establishment->logo) }}" alt="image" class="img-fluid">
-                                            </div>
-                                            <div class="popular-category__content">
-                                                <h5 class="popular-category__content-title">{{ $establishment->name }}</h5>
-                                            </div>
-                                            <div class="popular-category__overlay">
-                                                <h5 class="popular-category__overlay-title">{{ $establishment->name }}</h5>
-                                                <p class="popular-category__overlay-para">
-                                                    {{ Str::limit(strip_tags($establishment->description), 150) }}
-                                                </p>
-                                                <a href="#" class="popular-category__overlay-btn">
-                                                    <img src="assets/img/home-6/icon-arrow.png" alt="image" class="img-fluid">
-                                                </a>
+                                        <div class="popular-category__item item_establishment {{ $index == 1 ? 'active' : '' }}"
+                                            style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                                            <div class="popular-category__container">
+                                                <div class="popular-category__img">
+                                                    <img src="{{ asset('uploads/' . $establishment->logo) }}" alt="image"
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="popular-category__content">
+                                                    <h5 class="popular-category__content-title">{{ $establishment->name }}
+                                                    </h5>
+                                                </div>
+                                                <div class="popular-category__overlay">
+                                                    <h5 class="popular-category__overlay-title">{{ $establishment->name }}
+                                                    </h5>
+                                                    <p class="popular-category__overlay-para">
+                                                        {{ Str::limit(strip_tags($establishment->description), 150) }}
+                                                    </p>
+                                                    <a href="{{ route('establishment', $establishment->slug) }}"
+                                                        class="popular-category__overlay-btn">
+                                                        <img src="assets/img/home-6/icon-arrow.png" alt="image"
+                                                            class="img-fluid">
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
                                     @endforeach
                                 @endif
 
@@ -187,7 +145,7 @@
 
 
 
-{{--
+                {{--
                 <div class="row justify-content-center g-4 mt-4">
                     @if (filled($establishments))
                         @foreach ($establishments as $establishment)
@@ -216,7 +174,7 @@
 
 
 
-    <section class="pb-100 pt-80 position-relative overflow-hidden z-1 trending-products-area">
+    <section class="pb-100 pt-80 position-relative overflow-hidden z-1 trending-products-area mt-5">
         <img src="assets/img/shapes/garlic.png" alt="garlic" class="position-absolute garlic z--1"
             data-parallax="{&quot;y&quot;: 100}"
             style="transform:translate3d(0px, 48.388px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, 48.388px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
@@ -226,7 +184,7 @@
         <img src="assets/img/shapes/mashrom.png" alt="mashrom" class="position-absolute mashrom z--1"
             data-parallax="{&quot;x&quot;: 100}"
             style="transform:translate3d(48.388px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(48.388px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
-        <div class="container">
+        <div class="container mt-5 pt-5">
             <div class="row justify-content-center">
                 <div class="col-xl-6">
                     <div class="section-title text-center">
@@ -339,66 +297,22 @@
                     <div class="col-xl-5">
                         <div class="swiper feedback-slider-2">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide feedback-card bg-white rounded py-6 px-4">
-                                    <div class="d-flex align-items-center gap-4 flex-wrap mb-4">
-                                        <img src="assets/img/authors/client-1.png" alt="client"
-                                            class="img-fluid rounded-circle flex-shrink-0">
-                                        <div class="clients-info">
-                                            <h5 class="mb-1">George Nakashima</h5>
-                                            <ul class="d-flex align-items-center fs-xs text-warning">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
+                                @foreach ($testimonials as $testimonial)
+                                    <div class="swiper-slide feedback-card bg-white rounded py-6 px-4" style="min-height: 300px;">
+                                        <div class="d-flex align-items-center gap-4 flex-wrap mb-4">
+                                            <img src="{{ asset('uploads/'.$testimonial->image) }}" alt="client"
+                                                class="img-fluid rounded-circle flex-shrink-0" width="20%">
+                                            <div class="clients-info">
+                                                <h5 class="mb-1">{{ $testimonial->title }}</h5>
+                                                <ul class="d-flex align-items-center fs-xs text-warning">
+                                                    <li><b><em>{{ $testimonial->author }}</em></b></li>
+                                                </ul>
+                                            </div>
                                         </div>
+                                        <p class="mb-0">“{{ Str::limit(strip_tags($testimonial->description), 350) }}”</p>
                                     </div>
-                                    <p class="mb-0">“Conveniently synergize premium collaboration and idea-sharing with
-                                        compelling "outside the box" thinking. Interactivel product distinctive paradigms
-                                        whereas one-to-one intellectual capital. resource sucking services. Objectively
-                                        customize vertical.”</p>
-                                </div>
-                                <div class="swiper-slide feedback-card bg-white rounded py-6 px-4">
-                                    <div class="d-flex align-items-center gap-4 flex-wrap mb-4">
-                                        <img src="assets/img/authors/client-2.png" alt="client"
-                                            class="img-fluid rounded-circle flex-shrink-0">
-                                        <div class="clients-info">
-                                            <h5 class="mb-1">George Nakashima</h5>
-                                            <ul class="d-flex align-items-center fs-xs text-warning">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <p class="mb-0">“Conveniently synergize premium collaboration and idea-sharing with
-                                        compelling "outside the box" thinking. Interactivel product distinctive paradigms
-                                        whereas one-to-one intellectual capital. resource sucking services. Objectively
-                                        customize vertical.”</p>
-                                </div>
-                                <div class="swiper-slide feedback-card bg-white rounded py-6 px-4">
-                                    <div class="d-flex align-items-center gap-4 flex-wrap mb-4">
-                                        <img src="assets/img/authors/client-3.png" alt="client"
-                                            class="img-fluid rounded-circle flex-shrink-0">
-                                        <div class="clients-info">
-                                            <h5 class="mb-1">George Nakashima</h5>
-                                            <ul class="d-flex align-items-center fs-xs text-warning">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <p class="mb-0">“Conveniently synergize premium collaboration and idea-sharing with
-                                        compelling "outside the box" thinking. Interactivel product distinctive paradigms
-                                        whereas one-to-one intellectual capital. resource sucking services. Objectively
-                                        customize vertical.”</p>
-                                </div>
+                                @endforeach
+
                             </div>
                             <div class="slider-arrows text-end mt-5">
                                 <button type="button" class="fd2-arrow-left"><i class="fas fa-angle-left"></i></button>

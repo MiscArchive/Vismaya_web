@@ -3,6 +3,8 @@
 namespace App\Http\Requests\Establishments;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\Unique;
 
 class UpdateEstablishmentRequest extends FormRequest
 {
@@ -22,7 +24,7 @@ class UpdateEstablishmentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required'],
+            'name' => ['required',Rule::unique('establishments')->ignore($this->establishment->id)],
             'description' => ['required'],
             'logo' => ['nullable','mimes:png,jpg,jpeg'],
             'logo_small' => ['nullable','mimes:png,jpg,jpeg'],
