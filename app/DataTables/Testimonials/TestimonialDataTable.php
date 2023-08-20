@@ -23,6 +23,9 @@ class TestimonialDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addIndexColumn()
+            ->editColumn('establishment_id', function ($query) {
+                return $query->establishment ? $query->establishment->name : '';
+            })
             ->editColumn('image', function ($query) {
                 return $query->image ? '<img src="' . asset('uploads/' . $query->image) . '" alt="" class="rounded avatar-sm">' : '';
             })
@@ -42,7 +45,7 @@ class TestimonialDataTable extends DataTable
                 $deleteBtn = '<button class="btn btn-danger btn-icon btn-sm remove-item-btn" onClick="deleteTestimonial(' . $query->id . ')" style="margin-left:10px;"><i class="ph-trash" title="Delete"></i></button>';
                 return $editBtn . $deleteBtn;
             })
-            ->rawColumns(['image', 'actions', 'description','status']);
+            ->rawColumns(['image', 'actions', 'description','status','establishment_id']);
     }
 
     /**
@@ -50,7 +53,7 @@ class TestimonialDataTable extends DataTable
      */
     public function query(Testimonial $model): QueryBuilder
     {
-        return $model->newQuery()->orderBy('id', 'desc');
+        return $model->newQuery()->with('establishment');
     }
 
     /**
@@ -94,16 +97,16 @@ class TestimonialDataTable extends DataTable
                 'data' => 'DT_RowIndex',
             ],
             [
+                'name' => 'establishment_id',
+                'title' => 'Establishment',
+                'className' => 'text-center',
+                'data' => 'establishment_id',
+            ],
+            [
                 'name' => 'title',
                 'title' => 'Title',
                 'className' => 'text-center',
                 'data' => 'title',
-            ],
-            [
-                'name' => 'description',
-                'title' => 'Description',
-                'className' => 'text-center',
-                'data' => 'description',
             ],
             [
                 'name' => 'image',

@@ -11,6 +11,7 @@ class UpdateTestimonialAction
     public function execute(Collection $collection, Testimonial $testimonial)
     {
         try {
+            $testimonial->establishment_id = $collection->get('establishment_id');
             $testimonial->title = $collection->get('title');
             $testimonial->description = $collection->get('description');
             $testimonial->author = $collection->get('author');

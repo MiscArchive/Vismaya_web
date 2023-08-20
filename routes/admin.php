@@ -18,12 +18,11 @@ Route::post('/signup', [LoginController::class, 'signup'])->name('signup');
 
 // Admin routes
 Route::middleware(['role:admin', 'auth'])->group(function () {
-    Route::get('dashboard', [DashboardController::class, 'index']);
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
     Route::resource('establishments', EstablishmentController::class);
     Route::resource('branches', BranchesController::class);
-
     Route::resource('banners', BannersController::class);
     Route::resource('testimonials', TestimonialsController::class);
 

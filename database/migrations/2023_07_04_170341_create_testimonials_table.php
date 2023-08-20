@@ -15,6 +15,7 @@ return new class() extends Migration {
             $table->foreignId('establishment_id')->references('id')->on('establishments');
             $table->string('title');
             $table->text('description');
+            $table->string('author')->nullable();
             $table->string('image')->nullable();
             $table->tinyInteger('status')->default(1);
             $table->timestamps();

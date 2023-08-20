@@ -7,6 +7,7 @@ use App\Actions\Testimonials\UpdateTestimonialAction;
 use App\DataTables\Testimonials\TestimonialDataTable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Testimonials\CreateTestimonialRequest;
+use App\Models\Establishment;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -21,7 +22,8 @@ class TestimonialsController extends Controller
 
     public function create()
     {
-        return view('admin.testimonials.create');
+        $establishments = Establishment::active()->get();
+        return view('admin.testimonials.create', compact('establishments'));
     }
 
     public function store(CreateTestimonialRequest $request, CreateTestimonialAction $createTestimonialAction)
@@ -40,7 +42,8 @@ class TestimonialsController extends Controller
 
     public function edit(Testimonial $testimonial)
     {
-        return view('admin.testimonials.edit', compact('testimonial'));
+        $establishments = Establishment::active()->get();
+        return view('admin.testimonials.edit', compact(['testimonial', 'establishments']));
     }
 
     public function update(Testimonial $testimonial, UpdateTestimonialAction $updateTestimonialAction, CreateTestimonialRequest $request)

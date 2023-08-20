@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 
 @section('content')
     <div class="container-fluid">
@@ -29,12 +29,30 @@
                     @method('put')
                     @csrf
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
+                            <label for="title" class="form-label text-muted">Establishment</label>
+                            <select class="form-select mb-3" name="establishment_id">
+                                <option selected disabled>Choose</option>
+                                @foreach ($establishments as $establishment)
+                                    <option value="{{ $establishment->id }}"
+                                        @if ($establishment->id == $testimonial->establishment_id) selected @endif>{{ $establishment->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @if ($errors->has('establishment_id'))
+                                <span class="text-danger">{{ $errors->first('establishment_id') }}</span>
+                            @endif
+                        </div>
+
+                        <div class="col-md-6">
                             <div>
                                 <label for="title" class="form-label text-muted">Title</label>
                                 <input type="text" class="form-control" id="title" name="title"
                                     value="{{ $testimonial->title }}">
                             </div>
+                            @if ($errors->has('title'))
+                            <span class="text-danger">{{ $errors->first('title') }}</span>
+                        @endif
                         </div>
                     </div>
                     <div class="row mt-3">
@@ -43,6 +61,9 @@
                                 <label for="description" class="form-label text-muted">Description</label>
                                 <textarea class="ckeditor form-control" name="description">{{ $testimonial->description }}</textarea>
                             </div>
+                            @if ($errors->has('description'))
+                            <span class="text-danger">{{ $errors->first('description') }}</span>
+                        @endif
                         </div>
                     </div>
 
@@ -52,6 +73,9 @@
                                 <label for="author" class="form-label text-muted">Author</label>
                                 <input type="text" class="form-control" name="author" value="{{ $testimonial->author }}">
                             </div>
+                            @if ($errors->has('author'))
+                            <span class="text-danger">{{ $errors->first('author') }}</span>
+                        @endif
                         </div>
                     </div>
 
