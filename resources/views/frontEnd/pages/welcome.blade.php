@@ -171,10 +171,41 @@
             </div>
         </div>
     </section>
+    <section class="blog-carousel-section" style="margin-top:100px;">
+        <div class="col-xl-12">
+            <div class="section-title text-center">
+                <h2 class="mb-2">OFFERS</h2>
+               
+            </div>
+        </div>
+        <div class="container" style="margin-top: 100px;">
+          
+            <div class="blog-carousel swiper">
+                <div class="swiper-wrapper">
+                    @foreach ($offers as $offer)
+                    <div class="article-horizontal card-lg rounded-3 p-0 d-flex align-items-center gap-4 bg-white shadow swiper-slide">
+                        <div class="thumbnail overflow-hidden flex-shrink-0 rounded-2">
+                            <a href="#"><img src="{{ asset('uploads/'.$offer->image) }}" alt="gallery" class="img-fluid"></a>
+                        </div>
+                        <div class="article-contents">
+                        
+                            <a href="#"><h3 class="mb-3">{{$offer->title}}</h3></a>
+                            <p class="mb-4"></p>{{ Str::limit(strip_tags($offer->description), 
+                            450) }}
+                           
+                        </div>
+                    </div>
+                    @endforeach
+                 
+                
+                </div>    
+                <div class="blog-carousel-control theme-slider-control text-center mt-6"></div>
+            </div>
+        </div>
+    
+    </section>
 
-
-
-    <section class="pb-100 pt-80 position-relative overflow-hidden z-1 trending-products-area mt-5">
+    {{-- <section class="pb-100 pt-80 position-relative overflow-hidden z-1 trending-products-area mt-5">
         <img src="assets/img/shapes/garlic.png" alt="garlic" class="position-absolute garlic z--1"
             data-parallax="{&quot;y&quot;: 100}"
             style="transform:translate3d(0px, 48.388px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, 48.388px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
@@ -282,7 +313,7 @@
             </div>
 
         </div>
-    </section>
+    </section> --}}
 
     <section id="testimonials">
         <section style="margin-top:50px;"
