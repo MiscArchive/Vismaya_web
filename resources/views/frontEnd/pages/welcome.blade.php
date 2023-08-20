@@ -426,32 +426,47 @@
             <div class="contact-box rounded-2 bg-white overflow-hidden mt-8 pb-5">
                 <div class="row g-4">
                     <div class="col-xl-12">
-                        <form class="contact-form ps-5 ps-xl-4 py-6 pe-6" action="#">
+                        <form class="contact-form ps-5 ps-xl-4 py-6 pe-6" action="{{ route('enquiry.store') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="establishment_id" value="" >
                             <h5 class="mb-6">Make An Enquiry? Send Message</h5>
                             <div class="row g-4">
                                 <div class="col-sm-12">
                                     <div class="label-input-field">
                                         <label>Full Name</label>
-                                        <input type="text" placeholder="Saiful">
+                                        <input type="text" placeholder="Enter Your Name" name="name" id="name" value="{{old('name')}}">
                                     </div>
+                                    @if ($errors->has('name'))
+                                    <span class="text-danger">{{ $errors->first('name') }}</span>
+                                   @endif
+
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="label-input-field">
                                         <label>Email</label>
-                                        <input type="email" placeholder="You email">
+                                        <input type="email" placeholder="You email" name="email" id="email" value={{old('email')}}>
                                     </div>
+                                    @if ($errors->has('email'))
+                                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                                   @endif
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="label-input-field">
                                         <label>Phone</label>
-                                        <input type="tel" placeholder="Your phone">
+                                        <input type="tel" placeholder="Your phone" name="telephone" id="telephone" value="{{old('telephone')}}">
                                     </div>
+                                     @if ($errors->has('telephone'))
+                                    <span class="text-danger">{{ $errors->first('telephone') }}</span>
+                                   @endif
                                 </div>
                                 <div class="col-12">
                                     <div class="label-input-field">
                                         <label>Messages</label>
-                                        <textarea placeholder="Write your message" rows="4"></textarea>
+                                        <textarea placeholder="Write your message" rows="4" name="comments" id="comments" value={{old('comments')}}></textarea>
                                     </div>
+                                     @if ($errors->has('comments'))
+                                    <span class="text-danger">{{ $errors->first('comments') }}</span>
+                                   @endif
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary btn-md rounded-1 mt-6 float-end">Send
@@ -463,3 +478,28 @@
         </div>
     </section>
 @endsection
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
+@if(session('success'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: '{{ session('success') }}',
+                });
+            });
+        </script>
+@endif
+@if(session('error'))
+<script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Display SweetAlert with the general error message
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: '{{ session('error') }}',
+        });
+    });
+</script>
+@endif
