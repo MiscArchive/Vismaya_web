@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\Branches\BranchesController;
 use App\Http\Controllers\Admin\Dashboard\DashboardController;
 use App\Http\Controllers\Admin\Establishment\EstablishmentController;
 use App\Http\Controllers\Admin\Gallery\GalleryController;
+use App\Http\Controllers\Admin\Settings\SettingsController;
 use App\Http\Controllers\Admin\Testimonials\TestimonialsController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -27,4 +28,7 @@ Route::middleware(['role:admin', 'auth'])->group(function () {
     Route::resource('testimonials', TestimonialsController::class);
 
     Route::resource('gallery', GalleryController::class);
+    Route::get('settings', [SettingsController::class, 'settings'])->name('settings');
+    Route::post('profile-settings', [SettingsController::class, 'profileSettings'])->name('profile.settings.store');
+    Route::post('change-password', [SettingsController::class, 'changePassword'])->name('change.password');
 });

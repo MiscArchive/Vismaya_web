@@ -82,9 +82,8 @@
                       <div class="dropdown-menu dropdown-menu-end">
                           <!-- item-->
                           <h6 class="dropdown-header">Welcome {{ auth()->user()->name }}</h6>
-                          <a class="dropdown-item" href="pages-profile.html"><i
-                                  class="mdi mdi-account-circle text-muted fs-lg align-middle me-1"></i> <span
-                                  class="align-middle">Profile</span></a>
+                          <a class="dropdown-item" href="{{route('settings')}}"><i class="mdi mdi-cog-outline text-muted fs-lg align-middle me-1"></i><span
+                                  class="align-middle">Settings</span></a>
 
                                   <form id="myForm" method="post" action="{{route('logout')}}">
                                     @csrf
