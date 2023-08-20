@@ -63,16 +63,18 @@
 <!-- Dashboard init -->
 <script src="{{ asset('assets/js/pages/dashboard-ecommerce.init.js') }}"></script>
 <!-- App js -->
-<script src="{{ asset('assets/js/app.js') }}"></script>
 
  <script src="{{ asset('assets/libs/gridjs/gridjs.umd.js') }}"></script>
  <!-- gridjs init -->
  <script src="{{ asset('assets/js/pages/gridjs.init.js') }}"></script>
  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
  <script src="https://cdn.datatables.net/1.10.8/js/jquery.dataTables.min.js" defer="defer"></script>
 
 
  <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+ {{-- <script src="{{ asset('assets/js/app.js') }}"></script> --}}
+
 <script>
     function submitForm() {
         document.getElementById("myForm").submit();

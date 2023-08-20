@@ -14,8 +14,8 @@ return new class() extends Migration {
             $table->id();
             $table->foreignId('establishment_id')->references('id')->on('establishments');
             $table->string('title');
-            $table->text('description');
-            $table->enum('type', ['product', 'offer', 'banner', 'service']);
+            $table->text('description')->nullable();
+            $table->enum('type', ['product', 'offer', 'service'])->nullable();
             $table->boolean('status')->default(1);
             $table->boolean('is_featured')->default(0);
             $table->string('image');

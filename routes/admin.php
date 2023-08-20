@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\Banners\BannersController;
 use App\Http\Controllers\Admin\Branches\BranchesController;
+use App\Http\Controllers\Admin\CardItem\CardItemController;
 use App\Http\Controllers\Admin\Dashboard\DashboardController;
 use App\Http\Controllers\Admin\Establishment\EstablishmentController;
 use App\Http\Controllers\Admin\Gallery\GalleryController;
@@ -25,6 +26,9 @@ Route::middleware(['role:admin', 'auth'])->group(function () {
     Route::resource('branches', BranchesController::class);
     Route::resource('banners', BannersController::class);
     Route::resource('testimonials', TestimonialsController::class);
+    Route::resource('card-items', CardItemController::class);
+
+
 
     Route::resource('gallery', GalleryController::class);
 });
