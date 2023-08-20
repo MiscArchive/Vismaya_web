@@ -23,7 +23,7 @@ class CreateBannerRequest extends FormRequest
             'title' => ['nullable'],
             'description' => ['nullable'],
             'status' => ['nullable'],
-            'image' => ['required', 'mimes:png,jpg,jpeg'],
+            'image' => ['nullable', 'mimes:png,jpg,jpeg'],
         ];
     }
 }
