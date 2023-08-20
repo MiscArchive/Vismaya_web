@@ -1,4 +1,4 @@
-@extends('frontEnd.layouts.app')
+@extends('frontEnd.layouts.branch.app')
 
 @section('content')
     <!--hero section start-->

@@ -10,4 +10,9 @@ class PageController extends Controller
     {
         return view('frontEnd.pages.welcome');
     }
+
+    public function branch()
+    {
+        return view('frontEnd.pages.branch');
+    }
 }
