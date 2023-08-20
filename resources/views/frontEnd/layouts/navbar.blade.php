@@ -65,7 +65,7 @@
                 <div class="gshop-navbar bg-white rounded ps-lg-5 position-relative">
                     <div class="row align-items-center">
                         <div class="col-xxl-2 col-xl-3 col-md-3 col-5">
-                            <a href="index-2.html" class="logo"><img src="assets/img/logo.png" alt="logo"
+                            <a href="index-2.html" class="logo"><img src="{{ asset('assets/img/logo.png') }}" alt="logo"
                                     class="img-fluid"></a>
                         </div>
 
@@ -73,7 +73,7 @@
                             <div class="gshop-navbar-right d-flex align-items-center justify-content-end position-relative"
                                 style="padding-top: 20px;padding-bottom: 20px;">
                                 <div class="category-dropdown position-relative d-none d-md-inline-block">
-                                    <a href="javascript:void(0)"
+                                    <a href="#home"
                                         class="category-dropdown-btn fw-bold d-none d-sm-inline-block">Home<span
                                             class="ms-1"></a>
 

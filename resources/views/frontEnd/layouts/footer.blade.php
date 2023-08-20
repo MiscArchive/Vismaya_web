@@ -35,7 +35,7 @@
                         <li><a href="#">Kerala</a></li>
                         <li><a href="#">7673867</a></li>
                         <li><a href="#">India</a></li>
-                       
+
                     </ul>
                 </div>
             </div>
@@ -58,11 +58,11 @@
                         <li><a href="#">Instagram</a></li>
                         <li><a href="#">Gmail</a></li>
                         <li><a href="#">Twitter</a></li>
-                
+
                     </ul>
                 </div>
             </div>
-         
+
         </div>
     </div>
     <div class="footer-copyright pt-120 pb-3">
@@ -79,7 +79,7 @@
                         <a href="index-2.html" class="logo"><img src="assets/img/logo-white.png" alt="logo" class="img-fluid"></a>
                     </div>
                 </div>
-        
+
             </div>
         </div>
     </div>
@@ -102,35 +102,35 @@
         <nav class="mobile-menu-wrapper scrollbar">
             <ul>
                 <li>
-                    <a href="shop-grid.html" class="d-flex align-items-center">
+                    <a href="#home" class="d-flex align-items-center">
                     <div class="me-2 avatar-icon">
                     </div>
                      <span>Home</span>
                     </a>
                 </li>
                 <li>
-                    <a href="shop-grid.html" class="d-flex align-items-center">
+                    <a href="#about-us" class="d-flex align-items-center">
                     <div class="me-2 avatar-icon">
                     </div>
                      <span>About</span>
                     </a>
                 </li>
                 <li>
-                    <a href="shop-grid.html" class="d-flex align-items-center">
+                    <a href="#branches" class="d-flex align-items-center">
                     <div class="me-2 avatar-icon">
                     </div>
                      <span>Branches</span>
                     </a>
                 </li>
                 <li>
-                    <a href="shop-grid.html" class="d-flex align-items-center">
+                    <a href="#testimonials" class="d-flex align-items-center">
                     <div class="me-2 avatar-icon">
                     </div>
                      <span>Testimonials</span>
                     </a>
                 </li>
                 <li>
-                    <a href="shop-grid.html" class="d-flex align-items-center">
+                    <a href="#contact-us" class="d-flex align-items-center">
                     <div class="me-2 avatar-icon">
                     </div>
                      <span>Contact Us</span>
@@ -279,6 +279,10 @@
 <script src="assets/js/vendors/counterup.min.js"></script>
 <script src="assets/js/vendors/typer.js"></script>
 <script src="assets/js/app.js"></script>
+<script>
+
+
+</script>
 <!--endbuild-->
 </body>
 

@@ -35,37 +35,37 @@
 
                 {{-- <li class="menu-title"><span data-key="t-menu">Menu</span></li> --}}
                 <li class="nav-item">
-                    <a href="{{ route('admin.dashboard') }}" class="nav-link menu-link"> <i class="ph-folder-open"></i>
+                    <a href="{{ route('admin.dashboard') }}" class="nav-link menu-link"> <i class="ph-gauge"></i>
                         <span data-key="t-file-manager">Dashboard</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('establishments.index') }}" class="nav-link menu-link"> <i class="ph-folder-open"></i>
+                    <a href="{{ route('establishments.index') }}" class="nav-link menu-link"> <i class="ph-buildings"></i>
                         <span data-key="t-file-manager">Establishments</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('branches.index') }}" class="nav-link menu-link"> <i class="ph-folder-open"></i>
+                    <a href="{{ route('branches.index') }}" class="nav-link menu-link"> <i class="bi bi-share"></i>
                         <span data-key="t-file-manager">Branches</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('banners.index') }}" class="nav-link menu-link"> <i class="ph-folder-open"></i>
+                    <a href="{{ route('banners.index') }}" class="nav-link menu-link"> <i class="ph-file-text"></i>
                         <span data-key="t-file-manager">Banners</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('testimonials.index') }}" class="nav-link menu-link"> <i class="ph-folder-open"></i>
+                    <a href="{{ route('testimonials.index') }}" class="nav-link menu-link"> <i class="ph-table"></i>
                         <span data-key="t-file-manager">Testimonials</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('testimonials.index') }}" class="nav-link menu-link"> <i class="ph-folder-open"></i>
+                    <a href="{{ route('card-items.index') }}" class="nav-link menu-link"> <i class="ph-folder-open"></i>
                         <span data-key="t-file-manager">Card Items</span>
                     </a>
                 </li>
