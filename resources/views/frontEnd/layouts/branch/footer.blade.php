@@ -3,16 +3,16 @@
     <span class="position-absolute section-curve-wrapper top-0 h-100" data-background="assets/img/shapes/section-curve.png"></span>
 </div>
 <footer class="gshop-footer position-relative pt-8 bg-dark z-1 overflow-hidden">
-    <img src="assets/img/shapes/tomato.svg" alt="tomato" class="position-absolute z--1 tomato vector-shape">
-    <img src="assets/img/shapes/pata-lg.svg" alt="pata" class="position-absolute z--1 pata-lg vector-shape">
-    <img src="assets/img/shapes/pata-xs.svg" alt="pata" class="position-absolute z--1 pata-xs vector-shape">
-    <img src="assets/img/shapes/frame-circle.svg" alt="frame" class="position-absolute z--1 frame-circle vector-shape">
-    <img src="assets/img/shapes/leaf.svg" alt="leaf" class="position-absolute z--1 leaf vector-shape">
+    <img src="{{ asset('assets/img/shapes/tomato.svg') }}" alt="tomato" class="position-absolute z--1 tomato vector-shape">
+    <img src="{{ asset('assets/img/shapes/pata-lg.svg') }}" alt="pata" class="position-absolute z--1 pata-lg vector-shape">
+    <img src="{{ asset('assets/img/shapes/pata-xs.svg') }}" alt="pata" class="position-absolute z--1 pata-xs vector-shape">
+    <img src="{{ asset('assets/img/shapes/frame-circle.svg') }}" alt="frame" class="position-absolute z--1 frame-circle vector-shape">
+    <img src="{{ asset('assets/img/shapes/leaf.svg') }}" alt="leaf" class="position-absolute z--1 leaf vector-shape">
     <!--shape right -->
-    <img src="assets/img/shapes/leaf.svg" alt="pata" class="position-absolute leaf-2 z--1 vector-shape">
-    <img src="assets/img/shapes/pata-xs.svg" alt="pata" class="position-absolute pata-xs-2 z--1 vector-shape">
-    <img src="assets/img/shapes/tomato-slice.svg" alt="tomato slice" class="position-absolute tomato-slice vector-shape z--1">
-    <img src="assets/img/shapes/tomato-half.svg" alt="tomato" class="position-absolute tomato-half z--1 vector-shape">
+    <img src="{{ asset('assets/img/shapes/leaf.svg') }}" alt="pata" class="position-absolute leaf-2 z--1 vector-shape">
+    <img src="{{ asset('assets/img/shapes/pata-xs.svg') }}" alt="pata" class="position-absolute pata-xs-2 z--1 vector-shape">
+    <img src="{{ asset('assets/img/shapes/tomato-slice.svg') }}" alt="tomato slice" class="position-absolute tomato-slice vector-shape z--1">
+    <img src="{{ asset('assets/img/shapes/tomato-half.svg') }}" alt="tomato" class="position-absolute tomato-half z--1 vector-shape">
     <div class="container">
         {{-- <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6">
@@ -35,7 +35,7 @@
                         <li><a href="#">Kerala</a></li>
                         <li><a href="#">7673867</a></li>
                         <li><a href="#">India</a></li>
-                       
+
                     </ul>
                 </div>
             </div>
@@ -58,11 +58,11 @@
                         <li><a href="#">Instagram</a></li>
                         <li><a href="#">Gmail</a></li>
                         <li><a href="#">Twitter</a></li>
-                
+
                     </ul>
                 </div>
             </div>
-         
+
         </div>
     </div>
     <div class="footer-copyright pt-120 pb-3">
@@ -76,10 +76,10 @@
                 </div>
                 <div class="col-lg-4 d-none d-lg-block">
                     <div class="logo-wrapper text-center">
-                        <a href="index-2.html" class="logo"><img src="assets/img/logo-white.png" alt="logo" class="img-fluid"></a>
+                        <a href="index-2.html" class="logo"><img src="{{ asset('assets/img/logo-white.png') }}" alt="logo" class="img-fluid"></a>
                     </div>
                 </div>
-        
+
             </div>
         </div>
     </div>
@@ -98,7 +98,7 @@
 <div class="offcanvas-left-menu position-fixed">
     <div class="mobile-menu">
         <button class="offcanvas-close"><i class="fa-solid fa-xmark"></i></button>
-        <a href="#" class="d-inline-block mb-5"><img src="assets/img/logo.png" alt="logo"></a>
+        <a href="#" class="d-inline-block mb-5"><img src="{{ asset('assets/img/logo.png') }}" alt="logo"></a>
         <nav class="mobile-menu-wrapper scrollbar">
             <ul>
                 <li>
@@ -156,32 +156,33 @@
                                    <div class="quickview-product-slider swiper">
                                        <div class="swiper-wrapper">
                                            <div class="swiper-slide text-center">
-                                               <img src="assets/img/products/p-lg-1.png" alt="jam" class="img-fluid">
+                                               <img src="{{ asset('assets/img/products/p-lg-1.png') }}" alt="jam" class="img-fluid">
+
                                            </div>
                                            <div class="swiper-slide text-center">
-                                               <img src="assets/img/products/p-lg-2.png" alt="jam" class="img-fluid">
+                                               <img src="{{ asset('assets/img/products/p-lg-2.png') }}" alt="jam" class="img-fluid">
                                            </div>
                                            <div class="swiper-slide text-center">
-                                               <img src="assets/img/products/p-lg-3.png" alt="jam" class="img-fluid">
+                                               <img src="{{ asset('assets/img/products/p-lg-3.png') }}" alt="jam" class="img-fluid">
                                            </div>
                                            <div class="swiper-slide text-center">
-                                               <img src="assets/img/products/p-lg-4.png" alt="jam" class="img-fluid">
+                                               <img src="{{ asset('assets/img/products/p-lg-4.png') }}" alt="jam" class="img-fluid">
                                            </div>
                                        </div>
                                    </div>
                                    <div class="product-thumbnail-slider swiper mt-80">
                                        <div class="swiper-wrapper">
                                            <div class="swiper-slide product-thumb-single rounded-2 d-flex align-items-center justify-content-center">
-                                               <img src="assets/img/products/thumb-sm-1.png" alt="jam" class="img-fluid">
+                                               <img src="{{ asset('assets/img/products/thumb-sm-1.png') }}" alt="jam" class="img-fluid">
                                            </div>
                                            <div class="swiper-slide product-thumb-single rounded-2 d-flex align-items-center justify-content-center">
-                                               <img src="assets/img/products/thumb-sm-2.png" alt="jam" class="img-fluid">
+                                               <img src="{{ asset('assets/img/products/thumb-sm-2.png') }}" alt="jam" class="img-fluid">
                                            </div>
                                            <div class="swiper-slide product-thumb-single rounded-2 d-flex align-items-center justify-content-center">
-                                               <img src="assets/img/products/thumb-sm-3.png" alt="jam" class="img-fluid">
+                                               <img src="{{ asset('assets/img/products/thumb-sm-3.png') }}" alt="jam" class="img-fluid">
                                            </div>
                                            <div class="swiper-slide product-thumb-single rounded-2 d-flex align-items-center justify-content-center">
-                                               <img src="assets/img/products/thumb-sm-4.png" alt="jam" class="img-fluid">
+                                               <img src="{{ asset('assets/img/products/thumb-sm-4.png') }}" alt="jam" class="img-fluid">
                                            </div>
                                        </div>
                                    </div>
@@ -265,20 +266,21 @@
 </button>
 <!--scroll bottom to top button end-->
 <!--build:js-->
-<script src="assets/js/vendors/jquery-3.6.0.min.js"></script>
-<script src="assets/js/vendors/jquery-ui.min.js"></script>
-<script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
-<script src="assets/js/vendors/swiper-bundle.min.js"></script>
-<script src="assets/js/vendors/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/vendors/simplebar.min.js"></script>
-<script src="assets/js/vendors/parallax-scroll.js"></script>
-<script src="assets/js/vendors/isotop.pkgd.min.js"></script>
-<script src="assets/js/vendors/countdown.min.js"></script>
-<script src="assets/js/vendors/range-slider.js"></script>
-<script src="assets/js/vendors/waypoints.js"></script>
-<script src="assets/js/vendors/counterup.min.js"></script>
-<script src="assets/js/vendors/typer.js"></script>
-<script src="assets/js/app.js"></script>
+<script src="{{ asset('assets/js/vendors/jquery-3.6.0.min.js') }}"></script>
+<script src="{{ asset('assets/js/vendors/jquery-ui.min.js') }}"></script>
+<script src="{{ asset('assets/js/vendors/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/js/vendors/swiper-bundle.min.js') }}"></script>
+<script src="{{ asset('assets/js/vendors/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('assets/js/vendors/simplebar.min.js') }}"></script>
+<script src="{{ asset('assets/js/vendors/parallax-scroll.js') }}"></script>
+<script src="{{ asset('assets/js/vendors/isotop.pkgd.min.js') }}"></script>
+<script src="{{ asset('assets/js/vendors/countdown.min.js') }}"></script>
+<script src="{{ asset('assets/js/vendors/range-slider.js') }}"></script>
+<script src="{{ asset('assets/js/vendors/waypoints.js') }}"></script>
+<script src="{{ asset('assets/js/vendors/counterup.min.js') }}"></script>
+<script src="{{ asset('assets/js/vendors/typer.js') }}"></script>
+<script src="{{ asset('assets/js/app.js') }}"></script>
+
 <!--endbuild-->
 </body>
 

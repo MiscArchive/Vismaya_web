@@ -29,9 +29,9 @@
                                         <a href="product-details.html" class="btn btn-primary">Shop Now<span
                                                 class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
                                     </div>
-                                    <img src="assets/img/products/orange.png" alt="orange"
+                                    <img src="{{ asset('assets/img/products/orange.png') }}" alt="orange"
                                         class="slide-product img-fluid d-none d-md-block">
-                                    <img src="assets/img/products/orange-slice.png" alt="orange"
+                                    <img src="{{ asset('assets/img/products/orange-slice.png') }}" alt="orange"
                                         class="slide-product img-fluid d-md-none">
                                 </div>
                                 <div class="healthcare-hero-single swiper-slide bg-white rounded">
@@ -54,9 +54,9 @@
                                         <a href="product-details.html" class="btn btn-primary">Shop Now<span
                                                 class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
                                     </div>
-                                    <img src="assets/img/products/orange.png" alt="orange"
+                                    <img src="{{ asset('assets/img/products/orange.png') }}" alt="orange"
                                         class="slide-product img-fluid d-none d-md-block">
-                                    <img src="assets/img/products/orange-slice.png" alt="orange"
+                                    <img src="{{ asset('assets/img/products/orange-slice.png') }}" alt="orange"
                                         class="slide-product img-fluid d-md-none">
                                 </div>
                                 <div class="healthcare-hero-single swiper-slide bg-white rounded">
@@ -111,7 +111,7 @@
     <!--category section start-->
     <div id="about-us">
     <section class="category-section pb-120" >
-   
+
 
             <div class="container">
             <div class="row justify-content-center">
@@ -134,7 +134,7 @@
 
 
 
-    
+
 </section> <!--category section end-->
 </div>
     <!--category section start-->
@@ -159,9 +159,9 @@
                         <a href="http://vismaya_web.test/branch" class="explore-btn position-absolute"><i class="fa-solid fa-arrow-up"></i></a>
                     </div>
                 </div>
-                
-                
-                
+
+
+
                 <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
                     <div
                         class="gshop-animated-iconbox py-5 px-4 text-center border rounded-3 position-relative overflow-hidden color-2  hover-shadow">
@@ -240,16 +240,16 @@
                 <div class="col-xl-6">
                     <div class="section-title text-center">
                         <h2 class="mb-2">Product List</h2>
-                        
+
                     </div>
                 </div>
             </div>
-       
+
           <div class="row justify-content-center g-4 mt-5">
             <div class="products-slider-wrapper mt-8 position-relative">
                 <div class="offer-product-slider swiper pb-6">
                     <div class="swiper-wrapper">
-      
+
                         <div class="swiper-slide" style="width: 25%;">
                             <div class="vertical-product-card rounded-2 position-relative border-0 bg-white" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);">
                                 <div class="thumbnail position-relative text-center p-4">
@@ -263,7 +263,7 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <div class="swiper-slide" style="width: 25%;">
                             <div class="vertical-product-card rounded-2 position-relative border-0 bg-white" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);">
                                 <div class="thumbnail position-relative text-center p-4">
@@ -277,7 +277,7 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <div class="swiper-slide" style="width: 25%;">
                             <div class="vertical-product-card rounded-2 position-relative border-0 bg-white" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);">
                                 <div class="thumbnail position-relative text-center p-4">
@@ -291,7 +291,7 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <div class="swiper-slide" style="width: 25%;">
                             <div class="vertical-product-card rounded-2 position-relative border-0 bg-white" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);">
                                 <div class="thumbnail position-relative text-center p-4">
@@ -305,7 +305,7 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <!-- Additional slides go here -->
                     </div>
                 </div>
@@ -313,7 +313,7 @@
                 <button style="margin-bottom: 150px;" class="ofp-slider-next"><i class="fas fa-angle-right"></i></button>
             </div>
         </div>
-        
+
         </div>
       </section>
 

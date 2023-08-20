@@ -9,8 +9,8 @@
                         <div class="d-flex">
                             <div class="flex-grow-1">
                                 <div class="d-flex flex-column h-100">
-                                    <p class="fs-md text-muted mb-4">Branches</p>
-                                    <h3 class="mb-0 mt-auto"><span class="counter-value" data-target="3652">3,652</span>
+                                    <p class="fs-md text-muted mb-4">Products/Services</p>
+                                    <h3 class="mb-0 mt-auto"><span class="counter-value" data-target="3652">{{ $data['total_products'] }}</span>
                                 </div>
                             </div>
 
@@ -24,8 +24,8 @@
                         <div class="d-flex">
                             <div class="flex-grow-1">
                                 <div class="d-flex flex-column h-100">
-                                    <p class="fs-md text-muted mb-4">Products</p>
-                                    <h3 class="mb-0 mt-auto"><span class="counter-value" data-target="1524">1,524</span>
+                                    <p class="fs-md text-muted mb-4">Active Products/Services</p>
+                                    <h3 class="mb-0 mt-auto"><span class="counter-value" data-target="1524">{{ $data['active_products'] }}</span>
                                 </div>
                             </div>
 
@@ -39,8 +39,8 @@
                         <div class="d-flex">
                             <div class="flex-grow-1">
                                 <div class="d-flex flex-column h-100">
-                                    <p class="fs-md text-muted mb-4">Featued Products</p>
-                                    <h3 class="mb-0 mt-auto"><span class="counter-value" data-target="149.36">149.36</span>
+                                    <p class="fs-md text-muted mb-4">Featued Products/Services</p>
+                                    <h3 class="mb-0 mt-auto"><span class="counter-value" data-target="149.36">{{ $data['featured_products'] }}</span>
                                 </div>
                             </div>
 
@@ -54,8 +54,8 @@
                         <div class="d-flex">
                             <div class="flex-grow-1">
                                 <div class="d-flex flex-column h-100">
-                                    <p class="fs-md text-muted mb-4">Testimonials</p>
-                                    <h3 class="mb-0 mt-auto"><span class="counter-value" data-target="2376">2,376</span>
+                                    <p class="fs-md text-muted mb-4">Enquiries</p>
+                                    <h3 class="mb-0 mt-auto"><span class="counter-value" data-target="2376">{{ $data['enquiries'] }}</span>
                                     </h3>
                                 </div>
                             </div>
