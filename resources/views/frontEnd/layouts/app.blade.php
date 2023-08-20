@@ -1,4 +1,4 @@
-@include('frontEnd.layouts.header')
+@include('frontEnd.layouts.header',  ['settings' => \App\Models\Setting::first()])
 @include('frontEnd.layouts.navbar', ['settings' => \App\Models\Setting::first()])
 <div class="page-content">
 @yield('content')

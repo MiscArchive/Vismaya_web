@@ -14,7 +14,7 @@
     <meta content="Minimal Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+    {{-- <link rel="shortcut icon" href="{{ asset('uploads/'.$settings->favicon) }}"> --}}
 
     <!-- Fonts css load -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">

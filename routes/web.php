@@ -5,4 +5,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'index'])->name('welcomePage');
 
-Route::get('/{slug}', [PageController::class, 'branch'])->name('establishment');
+Route::get('ventures/{slug}', [PageController::class, 'branch'])->name('establishment');
