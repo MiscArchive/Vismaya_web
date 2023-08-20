@@ -17,7 +17,7 @@
     <meta name="keywords"
         content="">
     <!--favicon icon-->
-    <link rel="icon" href="{{ asset('uploads/'.$settings->favicon) }}" type="image/png" sizes="16x16">
+    {{-- <link rel="icon" href="{{ asset('uploads/'.$settings->favicon) }}" type="image/png" sizes="16x16"> --}}
 
     <!--title-->
     <title>Vismaya</title>
