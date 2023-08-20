@@ -6,6 +6,7 @@ use App\Actions\Settings\UpdateProfileSettingAction;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProfileSettings\ProfileSettingsRequest;
 use App\Http\Requests\Settings\ChangePasswordRequest;
+use App\Models\Setting;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -13,7 +14,8 @@ class SettingsController extends Controller
 {
     public function settings()
     {
-        return view('admin.Settings.index');
+        $settings = Setting::first();
+        return view('admin.Settings.index', compact('settings'));
     }
 
         public function profileSettings(ProfileSettingsRequest $request, UpdateProfileSettingAction $UpdateProfileSettingAction)
@@ -22,7 +24,7 @@ class SettingsController extends Controller
                 $response = $UpdateProfileSettingAction->execute(collect($request->validated()));
 
                 if (!$response) {
-                    return redirect()->back()->withErrors('Failed to Uppdate Profile!');
+                    return redirect()->back()->withErrors('Failed to Update Profile!');
                 }
 
                 return redirect()->route('settings')->withSuccess('Profile updated successfully');

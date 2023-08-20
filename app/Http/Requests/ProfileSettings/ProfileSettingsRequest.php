@@ -23,7 +23,7 @@ class ProfileSettingsRequest extends FormRequest
     {
         return [
             'description' => ['required'],
-            'logo' => ['required', 'mimes:png,jpg,jpeg'],
+            'logo' => ['nullable', 'mimes:png,jpg,jpeg'],
             'favicon' => ['nullable', 'mimes:png,jpg,jpeg'],
         ];
     }

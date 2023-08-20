@@ -2,9 +2,10 @@
     <div class="main-wrapper">
         <style>
             .category-dropdown-btn {
-              margin-right: 20px; /* Adjust the value as needed */
+                margin-right: 20px;
+                /* Adjust the value as needed */
             }
-          </style>
+        </style>
         <!--header section start-->
         <header class="gheader position-relative z-2 header-sticky">
             <div class="ghead-topbar bg-primary d-none d-lg-block">
@@ -65,8 +66,12 @@
                 <div class="gshop-navbar bg-white rounded ps-lg-5 position-relative">
                     <div class="row align-items-center">
                         <div class="col-xxl-2 col-xl-3 col-md-3 col-5">
-                            <a href="index-2.html" class="logo"><img src="{{ asset('assets/img/logo.png') }}" alt="logo"
-                                    class="img-fluid"></a>
+                            <a href="index-2.html" class="logo">
+                                @if (filled($settings))
+                                    <img src="{{ asset('uploads/' . $settings->logo) }}" alt="logo"
+                                        class="img-fluid" width="70%">
+                                @endif
+                            </a>
                         </div>
 
                         <div class="col-xxl-10 col-xl-9 col-md-9 col-7">

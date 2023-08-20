@@ -1,20 +1,24 @@
 <div class="app-menu navbar-menu">
     <!-- LOGO -->
     <div class="navbar-brand-box">
-        <a href="index.html" class="logo logo-dark">
-            <span class="logo-sm">
-                <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22">
-            </span>
+        <a href="#" class="logo logo-dark">
+            {{-- <span class="logo-sm">
+                <img src="{{ asset('uploads/' . $settings->logo) }}" alt="" height="22">
+            </span> --}}
             <span class="logo-lg">
-                <img src="{{ asset('assets/images/logo-dark.png') }}" alt="" height="22">
+                @if (filled($settings))
+                    <img src="{{ asset('uploads/' . $settings->logo) }}" alt="" width="50%">
+                @endif
             </span>
         </a>
-        <a href="index.html" class="logo logo-light">
-            <span class="logo-sm">
-                <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22">
-            </span>
+        <a href="#" class="logo logo-light">
+            {{-- <span class="logo-sm">
+                <img src="{{ asset('uploads/' . $settings->logo) }}" alt="" height="22">
+            </span> --}}
             <span class="logo-lg">
-                <img src="{{ asset('assets/images/logo-light.png') }}" alt="" height="22">
+                @if (filled($settings))
+                    <img src="{{ asset('uploads/' . $settings->logo) }}" alt="" width="50%">
+                @endif
             </span>
         </a>
         <button type="button" class="btn btn-sm p-0 fs-3xl header-item float-end btn-vertical-sm-hover"
@@ -41,7 +45,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('establishments.index') }}" class="nav-link menu-link"> <i class="ph-buildings"></i>
+                    <a href="{{ route('establishments.index') }}" class="nav-link menu-link"> <i
+                            class="ph-buildings"></i>
                         <span data-key="t-file-manager">Establishments</span>
                     </a>
                 </li>
