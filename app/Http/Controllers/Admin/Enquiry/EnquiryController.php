@@ -25,7 +25,7 @@ class EnquiryController extends Controller
             if ($request->establishment_id == null) {
                 return redirect()->route('welcomePage')->with('success', 'Enquiry submitted successfully. Thank you for reaching out. We will be in touch with you shortly.');
             } else {
-                return redirect()->route('welcomePage')->with('success', 'Enquiry submitted successfully. Thank you for reaching out. We will be in touch with you shortly.');
+                return redirect()->route('branch')->with('success', 'Enquiry submitted successfully');
             }
         } catch (\Throwable $th) {
             return redirect()->back()->withErrors(['error' => 'Something went wrong, Please try again!']);
