@@ -19,7 +19,7 @@ class EnquiryDataTable extends DataTable
         })
 
         ->addColumn('actions', function ($query) {
-            $editBtn = '<button class="btn btn-info btn-icon btn-sm open-modal-btn" data-comment="'.$query->comments.'"><i class="bx bx-edit" title="Edit"></i></button>';
+            $editBtn = '<button class="btn btn-info btn-icon btn-sm open-modal-btn" data-comment="'.$query->comments.'"><i class="ph ph-eye-thin" title="View"></i></button>';
 
             return $editBtn;
         })

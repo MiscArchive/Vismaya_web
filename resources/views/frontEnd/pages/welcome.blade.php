@@ -398,7 +398,7 @@
                                 <div class="col-sm-6">
                                     <div class="label-input-field">
                                         <label>Phone</label>
-                                        <input type="tel" placeholder="Your phone" name="telephone" id="telephone" value="{{old('telephone')}}">
+                                        <input type="number" placeholder="Your phone" name="telephone" id="telephone" value="{{old('telephone')}}">
                                     </div>
                                      @if ($errors->has('telephone'))
                                     <span class="text-danger">{{ $errors->first('telephone') }}</span>
