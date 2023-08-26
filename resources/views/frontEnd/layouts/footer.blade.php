@@ -80,9 +80,13 @@
                       </div>
                   </div>
                   <div class="col-lg-4 d-none d-lg-block">
-                      <div class="logo-wrapper text-center">
-                        <a href="#" class="logo"><img src="{{ asset('uploads/'.$establishment->logo) }}" alt="logo" class="img-fluid" width="20%"></a>
-                      </div>
+                      @if (filled($settings))
+                          <div class="logo-wrapper text-center">
+                              <a href="#" class="logo"><img src="{{ asset('uploads/' . $settings->logo) }}"
+                                      alt="logo" class="img-fluid" width="20%"></a>
+                          </div>
+                      @endif
+
                   </div>
 
               </div>
