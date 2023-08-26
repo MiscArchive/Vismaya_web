@@ -15,7 +15,7 @@
     <meta name="keywords"
           content="Grostore Grocery  ecommerce, admin template, online shop, e-commerce, ecommerce template, marketplace, modern, responsive,  business, mobile, bootstrap, html5, css3, js, gallery, slider, touch, creative, clean">
     <!--favicon icon-->
-    <link rel="icon" href="{{ asset('assets/img/favicon.png') }}" type="image/png" sizes="16x16">
+    {{-- <link rel="icon" href="{{ asset('assets/img/favicon.png') }}" type="image/png" sizes="16x16"> --}}
 
     <!--title-->
     <title>Vismaya</title>
