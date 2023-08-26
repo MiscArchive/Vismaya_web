@@ -11,4 +11,8 @@ class Testimonial extends Model
     use HasFactory, SoftDeletes;
 
     protected $guarded = [];
+
+    public function establishment(){
+        return $this->belongsTo(Establishment::class);
+    }
 }

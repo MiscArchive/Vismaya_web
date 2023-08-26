@@ -12,8 +12,9 @@ return new class() extends Migration {
     {
         Schema::create('banners', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('establishment_id')->references('id')->on('establishments');
             $table->string('title');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->string('image')->nullable();
             $table->tinyInteger('status')->default(1);
             $table->timestamps();

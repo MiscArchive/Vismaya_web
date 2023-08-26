@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 
 @section('content')
     <div class="container-fluid">
@@ -27,11 +27,26 @@
                 <form action="{{ route('banners.store') }}" enctype="multipart/form-data" method="POST">
                     @csrf
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
+                            <label for="title" class="form-label text-muted">Establishment</label>
+                            <select class="form-select mb-3" name="establishment_id">
+                                <option selected disabled>Choose</option>
+                                @foreach ($establishments as $establishment)
+                                    <option value="{{ $establishment->id }}">{{ $establishment->name }}</option>
+                                @endforeach
+                            </select>
+                            @if ($errors->has('establishment_id'))
+                                <span class="text-danger">{{ $errors->first('establishment_id') }}</span>
+                            @endif
+                        </div>
+                        <div class="col-md-6">
                             <div>
                                 <label for="title" class="form-label text-muted">Title</label>
                                 <input type="text" class="form-control" id="title" name="title">
                             </div>
+                            @if ($errors->has('title'))
+                                <span class="text-danger">{{ $errors->first('title') }}</span>
+                            @endif
                         </div>
                     </div>
                     <div class="row mt-3">
@@ -40,6 +55,9 @@
                                 <label for="description" class="form-label text-muted">Description</label>
                                 <textarea class="ckeditor form-control" name="description"></textarea>
                             </div>
+                            @if ($errors->has('description'))
+                                <span class="text-danger">{{ $errors->first('description') }}</span>
+                            @endif
                         </div>
                     </div>
 
@@ -49,6 +67,9 @@
                                 <label for="labelInput" class="form-label text-muted">Image</label>
                                 <input type="file" class="form-control" name="image">
                             </div>
+                            @if ($errors->has('image'))
+                                <span class="text-danger">{{ $errors->first('image') }}</span>
+                            @endif
                         </div>
                     </div>
 

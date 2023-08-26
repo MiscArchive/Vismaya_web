@@ -19,10 +19,11 @@ class CreateBannerRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required'],
+            'establishment_id' => ['required'],
+            'title' => ['nullable'],
             'description' => ['nullable'],
             'status' => ['nullable'],
-            'image' => ['required', 'mimes:png,jpg,jpeg'],
+            'image' => ['nullable', 'mimes:png,jpg,jpeg'],
         ];
     }
 }
