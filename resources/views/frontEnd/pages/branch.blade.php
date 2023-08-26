@@ -142,41 +142,34 @@
 
             <div class="row justify-content-center g-4 mt-5">
                 <div class="products-slider-wrapper mt-8 position-relative">
-                    <div class="offer-product-slider swiper pb-6">
-                        <div class="swiper-wrapper">
+                    <div class="swiper pb-6">
 
+
+                        <div class="swiper-wrapper">
                             @foreach ($products as $product)
-                                <div class="swiper-slide" style="width:25%;">
-                                    <div class="vertical-product-card rounded-2 position-relative border-0 bg-white"
-                                        style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);">
-                                        <div class="thumbnail position-relative text-center p-4">
-                                            <a href="#"><img src="{{ asset('uploads/' . $product->image) }}"
-                                                    alt="product" class="img-fluid"></a>
-                                        </div>
-                                        <div class="card-content text-center">
-                                            <a href="#" class="card-title fw-bold d-block mb-2">
-                                                <h4>{{ $product->title }}</h4>
-                                            </a>
-                                            <div
-                                                class="pricing mb-2 d-flex align-items-center justify-content-center gap-2">
-                                                <p class="mb-0"> {!! $product->description !!}</p>
-                                            </div>
+                            <div class="swiper-slide" id="{{$product->id}}" style="width:25%;margin-left:10px;border-radius: 20px;">
+                                <div class="vertical-product-card rounded-2 position-relative border-0 bg-white" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);">
+                                    <div class="thumbnail position-relative text-center p-4">
+                                        <a href="#"><img src="{{ asset('uploads/' . $product->image) }}" alt="product" class="img-fluid"></a>
+                                    </div>
+                                    <div class="card-content text-center">
+                                        <a href="product-details.html" class="card-title fw-bold d-block mb-2"><h4>{{$product->title}}</h4></a>
+                                        <div class="pricing mb-2 d-flex align-items-center justify-content-center gap-2">
+                                            <p class="mb-0">{{strip_tags($product->description)}}</p>
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
-
-
-
+                            </div>
+                        @endforeach
 
 
                             <!-- Additional slides go here -->
                         </div>
+
                     </div>
-                    <button style="margin-bottom: 150px;" class="ofp-slider-prev"><i
-                            class="fas fa-angle-left"></i></button>
-                    <button style="margin-bottom: 150px;" class="ofp-slider-next"><i
-                            class="fas fa-angle-right"></i></button>
+
+                    <button style="margin-bottom: 150px;" class="ofp-slider-prev"><i class="fas fa-angle-left"></i></button>
+                    <button style="margin-bottom: 150px;" class="ofp-slider-next"><i class="fas fa-angle-right"></i></button>
                 </div>
             </div>
 
@@ -299,6 +292,19 @@
     </section>
 @endsection
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
+<script>
+    // Initialize Swiper when the document is ready
+    document.addEventListener('DOMContentLoaded', function () {
+        var mySwiper = new Swiper('.swiper', {
+            // Swiper configuration options here
+            slidesPerView: 4, // Show three slides at a time
+            navigation: {
+                nextEl: '.ofp-slider-next',
+                prevEl: '.ofp-slider-prev',
+            },
+        });
+    });
+</script>
 @if (session('success'))
     <script>
         document.addEventListener('DOMContentLoaded', function() {
