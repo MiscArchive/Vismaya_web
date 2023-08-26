@@ -76,13 +76,12 @@
                   <div class="col-lg-4">
                       <div class="copyright-text">
                           <p class="mb-0 text-white">&copy; All rights reserved Made by <a href="#"
-                                  class="text-secondary">ThemeTags</a></p>
+                                  class="text-secondary">MiscArchive</a></p>
                       </div>
                   </div>
                   <div class="col-lg-4 d-none d-lg-block">
                       <div class="logo-wrapper text-center">
-                          <a href="index-2.html" class="logo"><img src="assets/img/logo-white.png" alt="logo"
-                                  class="img-fluid"></a>
+                        <a href="#" class="logo"><img src="{{ asset('uploads/'.$establishment->logo) }}" alt="logo" class="img-fluid" width="20%"></a>
                       </div>
                   </div>
 

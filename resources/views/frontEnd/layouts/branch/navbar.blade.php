@@ -65,7 +65,7 @@
                 <div class="gshop-navbar bg-white rounded ps-lg-5 position-relative">
                     <div class="row align-items-center">
                         <div class="col-xxl-2 col-xl-3 col-md-3 col-5">
-                            <a href="index-2.html" class="logo"><img src="{{ asset('uploads/'.$establishment->logo) }}" alt="logo"
+                            <a href="#" class="logo"><img src="{{ asset('uploads/'.$establishment->logo) }}" alt="logo"
                                     class="img-fluid" width="70%"></a>
                         </div>
 
