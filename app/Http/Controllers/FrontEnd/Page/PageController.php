@@ -18,8 +18,8 @@ class PageController extends Controller
         $establishments = Establishment::active()->get();
         $banners = Banner::where('status', 1)->distinct('establishment_id')->get();
         $testimonials = Testimonial::where('status', 1)->distinct('establishment_id')->get();
-
-        return view('frontEnd.pages.welcome', compact(['settings', 'establishments', 'banners', 'testimonials']));
+        $offers = CardItem::where('type', 'offer')->where('is_featured', 1)->distinct('establishment_id')->get();
+        return view('frontEnd.pages.welcome', compact(['settings', 'establishments', 'banners', 'testimonials','offers']));
     }
 
     public function branch($slug)
@@ -30,7 +30,7 @@ class PageController extends Controller
         $branches = Branch::where('establishment_id', $establishment->id)->where('status', 1)->get();
         $testimonials = Testimonial::where('status', 1)->where('establishment_id', $establishment)->get();
         $products = CardItem::where('establishment_id', $establishment->id)->where('is_featured', 1)->where('status', 1)->get();
-
-        return view('frontEnd.pages.branch', compact('establishment', 'banners', 'branches', 'products', 'testimonials'));
+        $offers = CardItem::where('type', 'offer')->where('is_featured', 1)->distinct('establishment_id')->get();
+        return view('frontEnd.pages.branch', compact(['establishment', 'banners', 'branches', 'products', 'testimonials','offers']));
     }
 }

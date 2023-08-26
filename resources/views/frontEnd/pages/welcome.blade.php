@@ -171,39 +171,46 @@
             </div>
         </div>
     </section>
-    <section class="blog-carousel-section" style="margin-top:100px;">
-        <div class="col-xl-12">
-            <div class="section-title text-center">
-                <h2 class="mb-2">OFFERS</h2>
-               
+    @if (filled($offers))
+        <section class="blog-carousel-section" style="margin-top:100px;">
+            <div class="col-xl-12">
+                <div class="section-title text-center">
+                    <h2 class="mb-2">Offers</h2>
+
+                </div>
             </div>
-        </div>
-        <div class="container" style="margin-top: 100px;">
-          
-            <div class="blog-carousel swiper">
-                <div class="swiper-wrapper">
-                    @foreach ($offers as $offer)
-                    <div class="article-horizontal card-lg rounded-3 p-0 d-flex align-items-center gap-4 bg-white shadow swiper-slide">
-                        <div class="thumbnail overflow-hidden flex-shrink-0 rounded-2">
-                            <a href="#"><img src="{{ asset('uploads/'.$offer->image) }}" alt="gallery" class="img-fluid"></a>
-                        </div>
-                        <div class="article-contents">
-                        
-                            <a href="#"><h3 class="mb-3">{{$offer->title}}</h3></a>
-                            <p class="mb-4"></p>{{ Str::limit(strip_tags($offer->description), 
-                            450) }}
-                           
-                        </div>
+            <div class="container" style="margin-top: 100px;">
+
+                <div class="blog-carousel swiper">
+                    <div class="swiper-wrapper">
+                        @foreach ($offers as $offer)
+                            <div
+                                class="article-horizontal card-lg rounded-3 p-0 d-flex align-items-center gap-4 bg-white shadow swiper-slide">
+                                <div class="thumbnail overflow-hidden flex-shrink-0 rounded-2">
+                                    <a href="#"><img src="{{ asset('uploads/' . $offer->image) }}" alt="gallery"
+                                            class="img-fluid"></a>
+                                </div>
+                                <div class="article-contents">
+
+                                    <a href="#">
+                                        <h3 class="mb-3">{{ $offer->title }}</h3>
+                                    </a>
+                                    <p class="mb-4"></p>
+                                    {{ Str::limit(strip_tags($offer->description), 450) }}
+
+                                </div>
+                            </div>
+                        @endforeach
+
+
                     </div>
-                    @endforeach
-                 
-                
-                </div>    
-                <div class="blog-carousel-control theme-slider-control text-center mt-6"></div>
+                    <div class="blog-carousel-control theme-slider-control text-center mt-6"></div>
+                </div>
             </div>
-        </div>
-    
-    </section>
+
+        </section>
+    @endif
+
 
     {{-- <section class="pb-100 pt-80 position-relative overflow-hidden z-1 trending-products-area mt-5">
         <img src="assets/img/shapes/garlic.png" alt="garlic" class="position-absolute garlic z--1"
@@ -329,9 +336,10 @@
                         <div class="swiper feedback-slider-2">
                             <div class="swiper-wrapper">
                                 @foreach ($testimonials as $testimonial)
-                                    <div class="swiper-slide feedback-card bg-white rounded py-6 px-4" style="min-height: 300px;">
+                                    <div class="swiper-slide feedback-card bg-white rounded py-6 px-4"
+                                        style="min-height: 300px;">
                                         <div class="d-flex align-items-center gap-4 flex-wrap mb-4">
-                                            <img src="{{ asset('uploads/'.$testimonial->image) }}" alt="client"
+                                            <img src="{{ asset('uploads/' . $testimonial->image) }}" alt="client"
                                                 class="img-fluid rounded-circle flex-shrink-0" width="20%">
                                             <div class="clients-info">
                                                 <h5 class="mb-1">{{ $testimonial->title }}</h5>
@@ -340,7 +348,8 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <p class="mb-0">“{{ Str::limit(strip_tags($testimonial->description), 350) }}”</p>
+                                        <p class="mb-0">“{{ Str::limit(strip_tags($testimonial->description), 350) }}”
+                                        </p>
                                     </div>
                                 @endforeach
 
@@ -371,47 +380,52 @@
             <div class="contact-box rounded-2 bg-white overflow-hidden mt-8 pb-5">
                 <div class="row g-4">
                     <div class="col-xl-12">
-                        <form class="contact-form ps-5 ps-xl-4 py-6 pe-6" action="{{ route('enquiry.store') }}" method="POST">
+                        <form class="contact-form ps-5 ps-xl-4 py-6 pe-6" action="{{ route('enquiry.store') }}"
+                            method="POST">
                             @csrf
-                            <input type="hidden" name="establishment_id" value="" >
+                            <input type="hidden" name="establishment_id" value="">
                             <h5 class="mb-6">Make An Enquiry? Send Message</h5>
                             <div class="row g-4">
                                 <div class="col-sm-12">
                                     <div class="label-input-field">
                                         <label>Full Name</label>
-                                        <input type="text" placeholder="Enter Your Name" name="name" id="name" value="{{old('name')}}">
+                                        <input type="text" placeholder="Enter Your Name" name="name"
+                                            id="name" value="{{ old('name') }}">
                                     </div>
                                     @if ($errors->has('name'))
-                                    <span class="text-danger">{{ $errors->first('name') }}</span>
-                                   @endif
+                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                    @endif
 
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="label-input-field">
                                         <label>Email</label>
-                                        <input type="email" placeholder="You email" name="email" id="email" value={{old('email')}}>
+                                        <input type="email" placeholder="You email" name="email" id="email"
+                                            value={{ old('email') }}>
                                     </div>
                                     @if ($errors->has('email'))
-                                    <span class="text-danger">{{ $errors->first('email') }}</span>
-                                   @endif
+                                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                                    @endif
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="label-input-field">
                                         <label>Phone</label>
-                                        <input type="number" placeholder="Your phone" name="telephone" id="telephone" value="{{old('telephone')}}">
+                                        <input type="number" placeholder="Your phone" name="telephone" id="telephone"
+                                            value="{{ old('telephone') }}">
                                     </div>
-                                     @if ($errors->has('telephone'))
-                                    <span class="text-danger">{{ $errors->first('telephone') }}</span>
-                                   @endif
+                                    @if ($errors->has('telephone'))
+                                        <span class="text-danger">{{ $errors->first('telephone') }}</span>
+                                    @endif
                                 </div>
                                 <div class="col-12">
                                     <div class="label-input-field">
                                         <label>Messages</label>
-                                        <textarea placeholder="Write your message" rows="4" name="comments" id="comments" value={{old('comments')}}></textarea>
+                                        <textarea placeholder="Write your message" rows="4" name="comments" id="comments"
+                                            value={{ old('comments') }}></textarea>
                                     </div>
-                                     @if ($errors->has('comments'))
-                                    <span class="text-danger">{{ $errors->first('comments') }}</span>
-                                   @endif
+                                    @if ($errors->has('comments'))
+                                        <span class="text-danger">{{ $errors->first('comments') }}</span>
+                                    @endif
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary btn-md rounded-1 mt-6 float-end">Send
@@ -424,27 +438,27 @@
     </section>
 @endsection
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
-@if(session('success'))
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Success',
-                    text: '{{ session('success') }}',
-                });
+@if (session('success'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: '{{ session('success') }}',
             });
-        </script>
-@endif
-@if(session('error'))
-<script>
-    // Wait for the DOM to be fully loaded
-    document.addEventListener('DOMContentLoaded', function() {
-        // Display SweetAlert with the general error message
-        Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: '{{ session('error') }}',
         });
-    });
-</script>
+    </script>
+@endif
+@if (session('error'))
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Display SweetAlert with the general error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: '{{ session('error') }}',
+            });
+        });
+    </script>
 @endif
