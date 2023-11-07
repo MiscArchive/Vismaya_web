@@ -134,7 +134,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6">
                     <div class="section-title text-center">
-                        <h2 class="mb-2">Our Products</h2>
+                        <h2 class="mb-2">Our Offers</h2>
 
                     </div>
                 </div>

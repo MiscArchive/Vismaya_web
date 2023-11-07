@@ -49,12 +49,12 @@
                             </div>
                             <div class="healthcare-hero-thumbnail-slider swiper">
                                 <div class="swiper-wrapper">
-                                    @foreach ($establishments as $establishment)
+                                    {{-- @foreach ($establishments as $establishment)
                                         <div class="swiper-slide thumbnail-single">
                                             <img src="{{ asset('uploads/' . $establishment->logo) }}" alt="thumbnail"
                                                 class="img-fluid rounded-circle">
                                         </div>
-                                    @endforeach
+                                    @endforeach --}}
                                 </div>
                             </div>
                         </div>
@@ -110,6 +110,7 @@
                                     @foreach ($establishments as $index => $establishment)
                                         <div class="popular-category__item item_establishment {{ $index == 1 ? 'active' : '' }}"
                                             style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                                            <a href="{{ route('establishment', $establishment->slug) }}">
                                             <div class="popular-category__container">
                                                 <div class="popular-category__img">
                                                     <img src="{{ asset('uploads/' . $establishment->logo) }}" alt="image"
@@ -119,7 +120,7 @@
                                                     <h5 class="popular-category__content-title">{{ $establishment->name }}
                                                     </h5>
                                                 </div>
-                                                <div class="popular-category__overlay">
+                                                {{-- <div class="popular-category__overlay">
                                                     <h5 class="popular-category__overlay-title">{{ $establishment->name }}
                                                     </h5>
                                                     <p class="popular-category__overlay-para">
@@ -130,8 +131,9 @@
                                                         <img src="assets/img/home-6/icon-arrow.png" alt="image"
                                                             class="img-fluid">
                                                     </a>
-                                                </div>
+                                                </div> --}}
                                             </div>
+                                        </a>
                                         </div>
                                     @endforeach
                                 @endif
