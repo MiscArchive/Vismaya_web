@@ -49,14 +49,19 @@
                             </div>
                             <div class="healthcare-hero-thumbnail-slider swiper">
                                 <div class="swiper-wrapper">
-                                    {{-- @foreach ($establishments as $establishment)
+
+                                </div>
+                            </div>
+                            {{-- <div class="healthcare-hero-thumbnail-slider swiper">
+                                <div class="swiper-wrapper"> --}}
+                            {{-- @foreach ($establishments as $establishment)
                                         <div class="swiper-slide thumbnail-single">
                                             <img src="{{ asset('uploads/' . $establishment->logo) }}" alt="thumbnail"
                                                 class="img-fluid rounded-circle">
                                         </div>
                                     @endforeach --}}
-                                </div>
-                            </div>
+                            {{-- </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -111,16 +116,17 @@
                                         <div class="popular-category__item item_establishment {{ $index == 1 ? 'active' : '' }}"
                                             style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                                             <a href="{{ route('establishment', $establishment->slug) }}">
-                                            <div class="popular-category__container">
-                                                <div class="popular-category__img">
-                                                    <img src="{{ asset('uploads/' . $establishment->logo) }}" alt="image"
-                                                        class="img-fluid">
-                                                </div>
-                                                <div class="popular-category__content">
-                                                    <h5 class="popular-category__content-title">{{ $establishment->name }}
-                                                    </h5>
-                                                </div>
-                                                {{-- <div class="popular-category__overlay">
+                                                <div class="popular-category__container">
+                                                    <div class="popular-category__img">
+                                                        <img src="{{ asset('uploads/' . $establishment->logo) }}"
+                                                            alt="image" class="img-fluid">
+                                                    </div>
+                                                    <div class="popular-category__content">
+                                                        <h5 class="popular-category__content-title">
+                                                            {{ $establishment->name }}
+                                                        </h5>
+                                                    </div>
+                                                    {{-- <div class="popular-category__overlay">
                                                     <h5 class="popular-category__overlay-title">{{ $establishment->name }}
                                                     </h5>
                                                     <p class="popular-category__overlay-para">
@@ -132,8 +138,8 @@
                                                             class="img-fluid">
                                                     </a>
                                                 </div> --}}
-                                            </div>
-                                        </a>
+                                                </div>
+                                            </a>
                                         </div>
                                     @endforeach
                                 @endif
@@ -453,6 +459,18 @@
 @endif
 @if (session('error'))
     <script>
+        console.log("Initializing Swiper");
+        var mySwiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+
         // Wait for the DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', function() {
             // Display SweetAlert with the general error message
