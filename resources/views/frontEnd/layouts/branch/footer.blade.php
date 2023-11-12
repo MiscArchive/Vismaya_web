@@ -31,10 +31,13 @@
                 <div class="footer-widget">
                     <h5 class="text-white mb-4">Vist US</h5>
                     <ul class="footer-nav">
-                        <li><a href="#">Trivandrum</a></li>
+                        @if($establishment)
+                        <li><a href="#">{{$establishment->district ?? ''}}</a></li>
                         <li><a href="#">Kerala</a></li>
-                        <li><a href="#">7673867</a></li>
+                        <li><a href="#">{{$establishment->pincode ?? ''}}</a></li>
                         <li><a href="#">India</a></li>
+                        @else
+                        @endif
 
                     </ul>
                 </div>
@@ -43,10 +46,13 @@
                 <div class="footer-widget">
                     <h5 class="text-white mb-4">Call US</h5>
                     <ul class="footer-nav">
+                        @if($establishment)
                         <li><a href="#">Tel</a></li>
-                        <li><a href="#">0471 2803335</a></li>
+                        <li><a href="#">{{$establishment->telephone ?? ''}}</a></li>
                         <li><a href="#">Mobile</a></li>
-                        <li><a href="#">9855550100</a></li>
+                        <li><a href="#">{{$establishment->mobile ?? ''}}</a></li>
+                        @else
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -54,12 +60,19 @@
                 <div class="footer-widget">
                     <h5 class="text-white mb-4">Follow US</h5>
                     <ul class="footer-nav">
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Gmail</a></li>
-                        <li><a href="#">Twitter</a></li>
-
+                        @if($establishment)
+                            @foreach(['facebook', 'instagram', 'gmail', 'twitter', 'linkedin'] as $social)
+                                @if($establishment->$social)
+                                    @if($social === 'gmail')
+                                        <li><a href="mailto:{{$establishment->$social}}" target="_blank"><i class="fas fa-envelope"></i> Gmail</a></li>
+                                    @else
+                                        <li><a href="{{$establishment->$social}}" target="_blank"><i class="fab fa-{{ $social }}"></i> {{ ucfirst($social) }}</a></li>
+                                    @endif
+                                @endif
+                            @endforeach
+                        @endif
                     </ul>
+                    
                 </div>
             </div>
 

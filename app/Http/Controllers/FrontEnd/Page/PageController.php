@@ -31,6 +31,7 @@ class PageController extends Controller
         $testimonials = Testimonial::where('status', 1)->where('establishment_id', $establishment)->get();
         $products = CardItem::where('establishment_id', $establishment->id)->where('is_featured', 1)->where('status', 1)->get();
         $offers = CardItem::where('type', 'offer')->where('is_featured', 1)->distinct('establishment_id')->get();
+        view()->share('establishment', $establishment);
         return view('frontEnd.pages.branch', compact(['establishment', 'banners', 'branches', 'products', 'testimonials','offers']));
     }
 }

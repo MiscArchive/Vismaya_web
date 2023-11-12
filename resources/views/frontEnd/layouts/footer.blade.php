@@ -33,7 +33,7 @@
           <div class="row g-5">
               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
                   <div class="footer-widget">
-                      <h5 class="text-white mb-4">Vist US</h5>
+                      <h5 class="text-white mb-4">Vist US </h5>
                       <ul class="footer-nav">
                           <li><a href="#">Trivandrum</a></li>
                           <li><a href="#">Kerala</a></li>
@@ -58,10 +58,12 @@
                   <div class="footer-widget">
                       <h5 class="text-white mb-4">Follow US</h5>
                       <ul class="footer-nav">
-                          <li><a href="#">Facebook</a></li>
-                          <li><a href="#">Instagram</a></li>
-                          <li><a href="#">Gmail</a></li>
-                          <li><a href="#">Twitter</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100094101612222" target="_blank"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/vismaya.hypermarket" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        {{-- <li><a href="#"><i class="fas fa-envelope"></i> Gmail</a></li> --}}
+                        <li><a href="https://www.linkedin.com/in/vismaya-groups-76527a281" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
+                        <li><a href="https://twitter.com/vismaya948" target="_blank"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+                      </ul>
 
                       </ul>
                   </div>

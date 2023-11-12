@@ -29,6 +29,15 @@ class UpdateEstablishmentRequest extends FormRequest
             'logo' => ['nullable','mimes:png,jpg,jpeg'],
             'logo_small' => ['nullable','mimes:png,jpg,jpeg'],
             'status' => ['required'],
+            'mobile' =>['nullable'],
+            'telephone' =>['nullable'],
+            'pincode' =>['nullable'],
+            'gmail' =>['nullable'],
+            'linkedin' =>['nullable'],
+            'facebook'=>['nullable'],
+            'district' =>['nullable'],
+            'instagram'=>['nullable'],
+            'twitter' => ['nullable'],
         ];
     }
 }

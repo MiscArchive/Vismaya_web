@@ -26,6 +26,15 @@ class CreateEstablishmentRequest extends FormRequest
             'description' => ['required'],
             'logo' => ['nullable','mimes:png,jpg,jpeg'],
             'logo_small' => ['nullable','mimes:png,jpg,jpeg'],
+            'mobile' =>['nullable'],
+            'telephone' =>['nullable'],
+            'pincode' =>['nullable'],
+            'gmail' =>['nullable'],
+            'linkedin' =>['nullable'],
+            'facebook'=>['nullable'],
+            'district' =>['nullable'],
+            'instagram'=>['nullable'],
+            'twitter' => ['nullable'],
         ];
     }
 }
