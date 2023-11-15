@@ -49,14 +49,19 @@
                             </div>
                             <div class="healthcare-hero-thumbnail-slider swiper">
                                 <div class="swiper-wrapper">
-                                    @foreach ($establishments as $establishment)
+
+                                </div>
+                            </div>
+                            {{-- <div class="healthcare-hero-thumbnail-slider swiper">
+                                <div class="swiper-wrapper"> --}}
+                            {{-- @foreach ($establishments as $establishment)
                                         <div class="swiper-slide thumbnail-single">
                                             <img src="{{ asset('uploads/' . $establishment->logo) }}" alt="thumbnail"
                                                 class="img-fluid rounded-circle">
                                         </div>
-                                    @endforeach
-                                </div>
-                            </div>
+                                    @endforeach --}}
+                            {{-- </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -104,40 +109,35 @@
 
                 <div class="container mt-4">
                     <div class="row justify-content-center g-4 mt-4">
-                        <div class="col-12">
-                            <div class="popular-category">
-                                @if (filled($establishments))
-                                    @foreach ($establishments as $index => $establishment)
-                                        <div class="popular-category__item item_establishment {{ $index == 1 ? 'active' : '' }}"
-                                            style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-                                            <div class="popular-category__container">
-                                                <div class="popular-category__img">
-                                                    <img src="{{ asset('uploads/' . $establishment->logo) }}" alt="image"
-                                                        class="img-fluid">
-                                                </div>
-                                                <div class="popular-category__content">
-                                                    <h5 class="popular-category__content-title">{{ $establishment->name }}
-                                                    </h5>
-                                                </div>
-                                                <div class="popular-category__overlay">
-                                                    <h5 class="popular-category__overlay-title">{{ $establishment->name }}
-                                                    </h5>
-                                                    <p class="popular-category__overlay-para">
-                                                        {{ Str::limit(strip_tags($establishment->description), 150) }}
-                                                    </p>
-                                                    <a href="{{ route('establishment', $establishment->slug) }}"
-                                                        class="popular-category__overlay-btn">
-                                                        <img src="assets/img/home-6/icon-arrow.png" alt="image"
-                                                            class="img-fluid">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                @endif
 
+                        <div class="py-8">
+                            <div class="container">
+                                <div class="row row-cols-1 row-cols-md-3 g-4">
+                                    @if (filled($establishments))
+                                    @foreach ($establishments as $index => $establishment)
+                                    <div class="col">
+                                        <!-- Card -->
+                                        <div class="card card-hover" style="min-height: 60%;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                                            
+                                            <a href="{{ route('establishment', $establishment->slug) }}" class="card-img-top">  <img src="{{ asset('uploads/' . $establishment->logo) }}"
+                                                alt="image" class="img-fluid">
+                                            <!-- Card Body -->
+                                            <div class="card-body">
+                                               
+                                                <h4 class="mb-2 text-truncate-line-2" style="text-align:center"><a
+                                                        href="" class="text-inherit"> {{ $establishment->name }}</a></h4>  
+                                              
+                                            </div>  
+                                            </a>
+                                           
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                    @endif
+                                </div>
                             </div>
                         </div>
+                     
                     </div>
                 </div>
 
@@ -451,6 +451,18 @@
 @endif
 @if (session('error'))
     <script>
+        console.log("Initializing Swiper");
+        var mySwiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+
         // Wait for the DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', function() {
             // Display SweetAlert with the general error message

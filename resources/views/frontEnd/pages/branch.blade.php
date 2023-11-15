@@ -47,12 +47,12 @@
                         </div>
                         <div class="healthcare-hero-thumbnail-slider swiper">
                             <div class="swiper-wrapper">
-                                @foreach ($banners as $banner)
+                                {{-- @foreach ($banners as $banner)
                                     <div class="swiper-slide thumbnail-single">
                                         <img src="{{ asset('uploads/' . $banner->image) }}" alt="thumbnail"
                                             class="img-fluid rounded-circle">
                                     </div>
-                                @endforeach
+                                @endforeach --}}
                             </div>
                         </div </div>
                     </div>
@@ -134,7 +134,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6">
                     <div class="section-title text-center">
-                        <h2 class="mb-2">Our Products</h2>
+                        <h2 class="mb-2">Our Offers</h2>
 
                     </div>
                 </div>
