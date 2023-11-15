@@ -101,11 +101,11 @@
                             class="gshop-animated-iconbox py-5 px-4 text-center border rounded-3 position-relative overflow-hidden hover-shadow">
                             <div
                                 class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
-                                <img src="assets/img/category/vegetable.png" alt="flower" class="img-fluid">
+                                <img src="{{ asset('assets/img/category/branch.png') }}" alt="flower" class="img-fluid">
                             </div>
-                            <a href="#" class="text-dark fs-sm fw-bold d-block mt-3">{{ $branch->name }}</a>
+                            <a href="{{ filled($branch->location_link) ? $branch->location_link : '#' }}" class="text-dark fs-sm fw-bold d-block mt-3" target="_blank">{{ $branch->name }}</a>
                             {{-- <span class="total-count position-relative ps-3 fs-sm fw-medium doted-primary">25 Items</span> --}}
-                            <a href="#" class="explore-btn position-absolute"><i class="fa-solid fa-arrow-up"></i></a>
+                            <a href="{{ filled($branch->location_link) ? $branch->location_link : '#' }}" class="explore-btn position-absolute" target="_blank"><i class="fa-solid fa-arrow-up"></i></a>
                         </div>
                     </div>
                 @endforeach
