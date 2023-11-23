@@ -3,4 +3,4 @@
 <div class="page-content">
 @yield('content')
 </div>
-@include('frontEnd.layouts.branch.footer')
+@include('frontEnd.layouts.branch.footer' , ['settings' => \App\Models\Setting::first()])
