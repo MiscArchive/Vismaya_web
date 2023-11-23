@@ -133,50 +133,55 @@
         <img src="{{ asset('assets/img/shapes/mashrom.png') }}" alt="mashrom" class="position-absolute mashrom z--1"
             data-parallax="{&quot;x&quot;: 100}"
             style="transform:translate3d(48.388px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(48.388px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-xl-6">
-                    <div class="section-title text-center">
-                        <h2 class="mb-2">Our Offers</h2>
+        @if (filled($products))
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section-title text-center">
+                            <h2 class="mb-2">Our Offers</h2>
 
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <section class="offer-section hm3-offer-section mt-3">
-                <div class="container">
-                    <div class="products-slider-wrapper position-relative">
-                        <div class="offer-product-slider swiper ">
-                            <div class="swiper-wrapper">
-                                @foreach ($products as $product)
-                                    <div class="swiper-slide">
-                                        <div class="vertical-product-card rounded-2 position-relative border-0 bg-white" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
-                                            <span
-                                                class="offer-badge text-white fw-bold fs-xxs bg-success position-absolute start-0 top-0">Offer</span>
-                                            <div class="thumbnail position-relative text-center p-4">
-                                                <img src="{{ asset('uploads/' . $product->image) }}" alt="offer"
-                                                    class="img-fluid" width="80%">
-                                            </div>
-                                            <div class="card-content text-center">
-                                                <h5 class="card-title fw-bold d-block mb-2">{{ $product->title }}</h5>
-                                                <p>
-                                                    {{ strip_tags($product->description) }}
+                <section class="offer-section hm3-offer-section mt-3">
+                    <div class="container">
+                        <div class="products-slider-wrapper position-relative">
+                            <div class="offer-product-slider swiper ">
+                                <div class="swiper-wrapper">
+                                    @foreach ($products as $product)
+                                        <div class="swiper-slide">
+                                            <div class="vertical-product-card rounded-2 position-relative border-0 bg-white"
+                                                style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+                                                <span
+                                                    class="offer-badge text-white fw-bold fs-xxs bg-success position-absolute start-0 top-0">Offer</span>
+                                                <div class="thumbnail position-relative text-center p-4">
+                                                    <img src="{{ asset('uploads/' . $product->image) }}" alt="offer"
+                                                        class="img-fluid" width="80%">
+                                                </div>
+                                                <div class="card-content text-center">
+                                                    <h5 class="card-title fw-bold d-block mb-2">{{ $product->title }}</h5>
+                                                    <p>
+                                                        {{ strip_tags($product->description) }}
 
-                                                </p>
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                @endforeach
+                                    @endforeach
+                                </div>
                             </div>
+                            <button class="ofp-slider-prev" style="margin-top: -13%;"><i
+                                    class="fas fa-angle-left"></i></button>
+                            <button class="ofp-slider-next" style="margin-top: -13%;"><i
+                                    class="fas fa-angle-right"></i></button>
                         </div>
-                        <button class="ofp-slider-prev" style="margin-top: -13%;"><i
-                                class="fas fa-angle-left"></i></button>
-                        <button class="ofp-slider-next" style="margin-top: -13%;"><i
-                                class="fas fa-angle-right"></i></button>
                     </div>
-                </div>
-            </section>
-                    {{-- <div class="row justify-content-center g-4 mt-5">
+                </section>
+            </div>
+        @endif
+
+        {{-- <div class="row justify-content-center g-4 mt-5">
                 <div class="products-slider-wrapper mt-8 position-relative">
                     <div class="swiper pb-6">
 
@@ -208,158 +213,160 @@
                     <button style="margin-bottom: 150px;" class="ofp-slider-next"><i class="fas fa-angle-right"></i></button>
                 </div>
             </div> --}}
-                    {{-- </div> --}}
+        {{-- </div> --}}
 
-    <section id="testimonials">
-        <section style="margin-top:50px;"
-            class="feedback-section pt-120 has-banner-bottom position-relative z-1 overflow-hidden bg-floral-white">
-            <div id="testimonials" class="container">
-                <div class="row align-items-center g-4">
-                    <div class="col-xl-7">
-                        <div class="clients_thumb">
-                            <img src="{{ asset('assets/img/about/clients.png') }}" alt="clients" class="img-fluid">
+        <section id="testimonials">
+            <section style="margin-top:50px;"
+                class="feedback-section pt-120 has-banner-bottom position-relative z-1 overflow-hidden bg-floral-white">
+                <div id="testimonials" class="container">
+                    <div class="row align-items-center g-4">
+                        <div class="col-xl-7">
+                            <div class="clients_thumb">
+                                <img src="{{ asset('assets/img/about/clients.png') }}" alt="clients" class="img-fluid">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xl-5">
-                        <div class="swiper feedback-slider-2">
-                            <div class="swiper-wrapper">
-                                @foreach ($testimonials as $testimonial)
-                                    <div class="swiper-slide feedback-card bg-white rounded py-6 px-4"
-                                        style="min-height: 300px;">
-                                        <div class="d-flex align-items-center gap-4 flex-wrap mb-4">
-                                            <img src="{{ asset('uploads/' . $testimonial->image) }}" alt="client"
-                                                class="img-fluid rounded-circle flex-shrink-0" width="20%">
-                                            <div class="clients-info">
-                                                <h5 class="mb-1">{{ $testimonial->title }}</h5>
-                                                <ul class="d-flex align-items-center fs-xs text-warning">
-                                                    <li><b><em>{{ $testimonial->author }}</em></b></li>
-                                                </ul>
+                        <div class="col-xl-5">
+                            <div class="swiper feedback-slider-2">
+                                <div class="swiper-wrapper">
+                                    @foreach ($testimonials as $testimonial)
+                                        <div class="swiper-slide feedback-card bg-white rounded py-6 px-4"
+                                            style="min-height: 300px;">
+                                            <div class="d-flex align-items-center gap-4 flex-wrap mb-4">
+                                                <img src="{{ asset('uploads/' . $testimonial->image) }}" alt="client"
+                                                    class="img-fluid rounded-circle flex-shrink-0" width="20%">
+                                                <div class="clients-info">
+                                                    <h5 class="mb-1">{{ $testimonial->title }}</h5>
+                                                    <ul class="d-flex align-items-center fs-xs text-warning">
+                                                        <li><b><em>{{ $testimonial->author }}</em></b></li>
+                                                    </ul>
+                                                </div>
                                             </div>
+                                            <p class="mb-0">
+                                                “{{ Str::limit(strip_tags($testimonial->description), 350) }}”
+                                            </p>
                                         </div>
-                                        <p class="mb-0">“{{ Str::limit(strip_tags($testimonial->description), 350) }}”
-                                        </p>
-                                    </div>
-                                @endforeach
+                                    @endforeach
 
-                            </div>
-                            <div class="slider-arrows text-end mt-5">
-                                <button type="button" class="fd2-arrow-left"><i class="fas fa-angle-left"></i></button>
-                                <button type="button" class="fd2-arrow-right"><i
-                                        class="fas fa-angle-right"></i></button>
+                                </div>
+                                <div class="slider-arrows text-end mt-5">
+                                    <button type="button" class="fd2-arrow-left"><i
+                                            class="fas fa-angle-left"></i></button>
+                                    <button type="button" class="fd2-arrow-right"><i
+                                            class="fas fa-angle-right"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section> <!--feedback section end-->
+            </section> <!--feedback section end-->
 
-    </section>
-    <section id="contact-us">
-        <div class="row justify-content-center pt-120">
-            <div class="col-xl-12">
-                <div class="breadcrumb-content">
-                    <h2 class="mb-2 text-center">Get In Touch</h2>
+        </section>
+        <section id="contact-us">
+            <div class="row justify-content-center pt-120">
+                <div class="col-xl-12">
+                    <div class="breadcrumb-content">
+                        <h2 class="mb-2 text-center">Get In Touch</h2>
 
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="contact-box rounded-2 bg-white overflow-hidden mt-8 pb-5">
-                <div class="row g-4">
-                    <div class="col-xl-12">
-                        <form class="contact-form ps-5 ps-xl-4 py-6 pe-6" action="{{ route('enquiry.store') }}"
-                            method="POST">
-                            @csrf
-                            <input type="hidden" name="establishment_id" value="{{ $establishment->id }}">
-                            <h5 class="mb-6">Make An Enquiry? Send Message</h5>
-                            <div class="row g-4">
-                                <div class="col-sm-12">
-                                    <div class="label-input-field">
-                                        <label>Full Name</label>
-                                        <input type="text" placeholder="Enter Your Name" name="name"
-                                            id="name" value="{{ old('name') }}">
-                                    </div>
-                                    @if ($errors->has('name'))
-                                        <span class="text-danger">{{ $errors->first('name') }}</span>
-                                    @endif
-
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="label-input-field">
-                                        <label>Email</label>
-                                        <input type="email" placeholder="You email" name="email" id="email"
-                                            value={{ old('email') }}>
-                                    </div>
-                                    @if ($errors->has('email'))
-                                        <span class="text-danger">{{ $errors->first('email') }}</span>
-                                    @endif
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="label-input-field">
-                                        <label>Phone</label>
-                                        <input type="tel" placeholder="Your phone" name="telephone" id="telephone"
-                                            value="{{ old('telephone') }}">
-                                    </div>
-                                    @if ($errors->has('telephone'))
-                                        <span class="text-danger">{{ $errors->first('telephone') }}</span>
-                                    @endif
-                                </div>
-                                <div class="col-12">
-                                    <div class="label-input-field">
-                                        <label>Messages</label>
-                                        <textarea placeholder="Write your message" rows="4" name="comments" id="comments"
-                                            value={{ old('comments') }}></textarea>
-                                    </div>
-                                    @if ($errors->has('comments'))
-                                        <span class="text-danger">{{ $errors->first('comments') }}</span>
-                                    @endif
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-md rounded-1 mt-6 float-end">Send
-                                Message</button>
-                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-@endsection
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
-<script>
-    // Initialize Swiper when the document is ready
-    document.addEventListener('DOMContentLoaded', function() {
-        var mySwiper = new Swiper('.swiper', {
-            // Swiper configuration options here
-            slidesPerView: 4, // Show three slides at a time
-            navigation: {
-                nextEl: '.ofp-slider-next',
-                prevEl: '.ofp-slider-prev',
-            },
-        });
-    });
-</script>
-@if (session('success'))
+
+            <div class="container">
+                <div class="contact-box rounded-2 bg-white overflow-hidden mt-8 pb-5">
+                    <div class="row g-4">
+                        <div class="col-xl-12">
+                            <form class="contact-form ps-5 ps-xl-4 py-6 pe-6" action="{{ route('enquiry.store') }}"
+                                method="POST">
+                                @csrf
+                                <input type="hidden" name="establishment_id" value="{{ $establishment->id }}">
+                                <h5 class="mb-6">Make An Enquiry? Send Message</h5>
+                                <div class="row g-4">
+                                    <div class="col-sm-12">
+                                        <div class="label-input-field">
+                                            <label>Full Name</label>
+                                            <input type="text" placeholder="Enter Your Name" name="name"
+                                                id="name" value="{{ old('name') }}">
+                                        </div>
+                                        @if ($errors->has('name'))
+                                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                                        @endif
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="label-input-field">
+                                            <label>Email</label>
+                                            <input type="email" placeholder="You email" name="email" id="email"
+                                                value={{ old('email') }}>
+                                        </div>
+                                        @if ($errors->has('email'))
+                                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                                        @endif
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="label-input-field">
+                                            <label>Phone</label>
+                                            <input type="tel" placeholder="Your phone" name="telephone"
+                                                id="telephone" value="{{ old('telephone') }}">
+                                        </div>
+                                        @if ($errors->has('telephone'))
+                                            <span class="text-danger">{{ $errors->first('telephone') }}</span>
+                                        @endif
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="label-input-field">
+                                            <label>Messages</label>
+                                            <textarea placeholder="Write your message" rows="4" name="comments" id="comments"
+                                                value={{ old('comments') }}></textarea>
+                                        </div>
+                                        @if ($errors->has('comments'))
+                                            <span class="text-danger">{{ $errors->first('comments') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-md rounded-1 mt-6 float-end">Send
+                                    Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    @endsection
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
     <script>
+        // Initialize Swiper when the document is ready
         document.addEventListener('DOMContentLoaded', function() {
-            Swal.fire({
-                icon: 'success',
-                title: 'Success',
-                text: '{{ session('success') }}',
+            var mySwiper = new Swiper('.swiper', {
+                // Swiper configuration options here
+                slidesPerView: 4, // Show three slides at a time
+                navigation: {
+                    nextEl: '.ofp-slider-next',
+                    prevEl: '.ofp-slider-prev',
+                },
             });
         });
     </script>
-@endif
-@if (session('error'))
-    <script>
-        // Wait for the DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Display SweetAlert with the general error message
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: '{{ session('error') }}',
+    @if (session('success'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: '{{ session('success') }}',
+                });
             });
-        });
-    </script>
-@endif
+        </script>
+    @endif
+    @if (session('error'))
+        <script>
+            // Wait for the DOM to be fully loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                // Display SweetAlert with the general error message
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: '{{ session('error') }}',
+                });
+            });
+        </script>
+    @endif
