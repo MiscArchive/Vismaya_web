@@ -48,14 +48,14 @@
                                     </span>
                                     Trivandrum , Kerala -7673687
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="javascript:void(0)" class="btn btn-link p-0 tt-theme-toggle fw-normal">
                                         <div class="tt-theme-light" data-bs-toggle="tooltip" data-bs-placement="left"
                                             data-bs-title="Dark">Dark <i class="fas fa-moon fs-lg ms-1"></i></div>
                                         <div class="tt-theme-dark" data-bs-toggle="tooltip" data-bs-placement="left"
                                             data-bs-title="Light">Light <i class="fas fa-sun fs-lg ms-1"></i></div>
                                     </a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>

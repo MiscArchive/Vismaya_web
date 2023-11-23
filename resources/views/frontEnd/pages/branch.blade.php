@@ -153,7 +153,7 @@
                                         <a href="#"><img src="{{ asset('uploads/' . $product->image) }}" alt="product" class="img-fluid"></a>
                                     </div>
                                     <div class="card-content text-center">
-                                        <a href="product-details.html" class="card-title fw-bold d-block mb-2"><h4>{{$product->title}}</h4></a>
+                                        <a href="#" class="card-title fw-bold d-block mb-2"><h4>{{$product->title}}</h4></a>
                                         <div class="pricing mb-2 d-flex align-items-center justify-content-center gap-2">
                                             <p class="mb-0">{{strip_tags($product->description)}}</p>
                                         </div>

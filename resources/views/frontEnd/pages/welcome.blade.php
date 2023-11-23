@@ -118,18 +118,18 @@
                                     <div class="col">
                                         <!-- Card -->
                                         <div class="card card-hover" style="min-height: 60%;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-                                            
+
                                             <a href="{{ route('establishment', $establishment->slug) }}" class="card-img-top">  <img src="{{ asset('uploads/' . $establishment->logo) }}"
                                                 alt="image" class="img-fluid">
                                             <!-- Card Body -->
                                             <div class="card-body">
-                                               
+
                                                 <h4 class="mb-2 text-truncate-line-2" style="text-align:center"><a
-                                                        href="" class="text-inherit"> {{ $establishment->name }}</a></h4>  
-                                              
-                                            </div>  
+                                                        href="{{ route('establishment', $establishment->slug) }}" class="text-inherit"> {{ $establishment->name }}</a></h4>
+
+                                            </div>
                                             </a>
-                                           
+
                                         </div>
                                     </div>
                                     @endforeach
@@ -137,7 +137,7 @@
                                 </div>
                             </div>
                         </div>
-                     
+
                     </div>
                 </div>
 
