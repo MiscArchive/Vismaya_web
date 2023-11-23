@@ -58,11 +58,19 @@
                   <div class="footer-widget">
                       <h5 class="text-white mb-4">Follow US</h5>
                       <ul class="footer-nav">
-                        <li><a href="https://www.facebook.com/profile.php?id=100094101612222" target="_blank"><i class="fa-brands fa-facebook-f"></i><span style="margin-left: 5px;">Facebook</span> </a></li>
-                        <li><a href="https://www.instagram.com/vismaya.hypermarket" target="_blank"><i class="fa-brands fa-instagram"></i><span style="margin-left: 5px;"> Instagram</span></a></li>
-                        {{-- <li><a href="#"><i class="fas fa-envelope"></i> Gmail</a></li> --}}
-                        <li><a href="https://www.linkedin.com/in/vismaya-groups-76527a281" target="_blank"><i class="fa-brands fa-linkedin"></i><span style="margin-left: 5px;">Linkedin</span></a></li>
-                        <li><a href="https://twitter.com/vismaya948" target="_blank"><i class="fa-brands fa-twitter"></i><span style="margin-left: 5px;">Twitter</span></a></li>
+                          <li><a href="https://www.facebook.com/profile.php?id=100094101612222" target="_blank"><i
+                                      class="fa-brands fa-facebook-f"></i><span
+                                      style="margin-left: 5px;">Facebook</span> </a></li>
+                          <li><a href="https://www.instagram.com/vismaya.hypermarket" target="_blank"><i
+                                      class="fa-brands fa-instagram"></i><span style="margin-left: 5px;">
+                                      Instagram</span></a></li>
+                          {{-- <li><a href="#"><i class="fas fa-envelope"></i> Gmail</a></li> --}}
+                          <li><a href="https://www.linkedin.com/in/vismaya-groups-76527a281" target="_blank"><i
+                                      class="fa-brands fa-linkedin"></i><span
+                                      style="margin-left: 5px;">Linkedin</span></a></li>
+                          <li><a href="https://twitter.com/vismaya948" target="_blank"><i
+                                      class="fa-brands fa-twitter"></i><span
+                                      style="margin-left: 5px;">Twitter</span></a></li>
                       </ul>
 
                       </ul>
@@ -109,7 +117,12 @@
   <div class="offcanvas-left-menu position-fixed">
       <div class="mobile-menu">
           <button class="offcanvas-close"><i class="fa-solid fa-xmark"></i></button>
-          <a href="#" class="d-inline-block mb-5"><img src="assets/img/logo.png" alt="logo"></a>
+          @if (filled($settings))
+              <a href="#" class="d-inline-block mb-5">
+                  <img src="{{ asset('uploads/' . $settings->logo) }}" alt="logo" style="width: 150px;">
+              </a>
+          @endif
+
           <nav class="mobile-menu-wrapper scrollbar">
               <ul>
                   <li>

@@ -72,7 +72,7 @@
                             @endforeach
                         @endif
                     </ul>
-                    
+
                 </div>
             </div>
 
@@ -111,39 +111,45 @@
 <div class="offcanvas-left-menu position-fixed">
     <div class="mobile-menu">
         <button class="offcanvas-close"><i class="fa-solid fa-xmark"></i></button>
-        <a href="#" class="d-inline-block mb-5"><img src="{{ asset('assets/img/logo.png') }}" alt="logo"></a>
+        <a href="#" class="d-inline-block mb-5">
+            @if (filled($settings))
+            <a href="#" class="d-inline-block mb-5">
+                <img src="{{ asset('uploads/' . $settings->logo) }}" alt="logo" style="width: 150px;">
+            </a>
+        @endif
+        </a>
         <nav class="mobile-menu-wrapper scrollbar">
             <ul>
                 <li>
-                    <a href="shop-grid.html" class="d-flex align-items-center">
+                    <a href="{{route('welcomePage')}}" class="d-flex align-items-center">
                     <div class="me-2 avatar-icon">
                     </div>
                      <span>Home</span>
                     </a>
                 </li>
                 <li>
-                    <a href="shop-grid.html" class="d-flex align-items-center">
+                    <a href="#about-us" class="d-flex align-items-center">
                     <div class="me-2 avatar-icon">
                     </div>
                      <span>About</span>
                     </a>
                 </li>
                 <li>
-                    <a href="shop-grid.html" class="d-flex align-items-center">
+                    <a href="#branches" class="d-flex align-items-center">
                     <div class="me-2 avatar-icon">
                     </div>
                      <span>Branches</span>
                     </a>
                 </li>
                 <li>
-                    <a href="shop-grid.html" class="d-flex align-items-center">
+                    <a href="#testimonials" class="d-flex align-items-center">
                     <div class="me-2 avatar-icon">
                     </div>
                      <span>Testimonials</span>
                     </a>
                 </li>
                 <li>
-                    <a href="shop-grid.html" class="d-flex align-items-center">
+                    <a href="#contact-us" class="d-flex align-items-center">
                     <div class="me-2 avatar-icon">
                     </div>
                      <span>Contact Us</span>
