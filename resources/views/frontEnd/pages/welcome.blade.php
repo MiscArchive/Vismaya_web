@@ -106,7 +106,33 @@
                     </div>
                 </div>
 
+                <div class="row g-4 justify-content-center mt-3">
+                    @if (filled($establishments))
+                        @foreach ($establishments as $index => $establishment)
+                            <div class="col-xl-3 col-md-4">
+                                <article class="blog-card rounded-2 overflow-hidden bg-white"
+                                    style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">
+                                    <div class="thumbnail overflow-hidden">
+                                        <div style="text-align: center;height:55%;">
+                                            <a href="{{ route('establishment', $establishment->slug) }}">
+                                                <img src="{{ asset('uploads/' . $establishment->logo) }}" alt="blog thumb"
+                                                    class="img-fluid" width="70%;">
+                                            </a>
+                                        </div>
 
+                                    </div>
+                                    <div class="blog-card-content" style="text-align: center;">
+                                        <a href="{{ route('establishment', $establishment->slug) }}">
+                                            <h4 class="mb-3">{{ $establishment->name }}</h4>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+                {{-- COMMENTED ON 24-11-2023 --}}
+                {{--
                 <div class="container mt-4">
                     <div class="row justify-content-center g-4 mt-4">
 
@@ -139,7 +165,8 @@
                         </div>
 
                     </div>
-                </div>
+                </div> --}}
+                {{-- COMMENTED ON 24-11-2023 --}}
 
 
 

@@ -13,7 +13,7 @@
                     <div class="row align-items-center">
                         <div class="col-xxl-4 col-xl-3">
                             <div class="topbar-info d-none d-xl-block">
-                                <p class="text-white fs-sm fw-medium mb-0">Welcome to vismaya group of companies</p>
+                                {{-- <p class="text-white fs-sm fw-medium mb-0">Welcome to vismaya group of companies</p> --}}
                             </div>
                         </div>
                         <div class="col-xxl-8 col-xl-9">
@@ -47,7 +47,7 @@
                                                 fill="white" stroke="white" stroke-width="0.3" />
                                         </svg>
                                     </span>
-                                    Trivandrum , Kerala -7673687
+                                    Trivandrum , Kerala -695572
                                 </li>
                                 {{-- <li class="nav-item">
                                     <a href="javascript:void(0)" class="btn btn-link p-0 tt-theme-toggle fw-normal">
