@@ -37,7 +37,7 @@
                       <ul class="footer-nav">
                           <li><a href="#">Trivandrum</a></li>
                           <li><a href="#">Kerala</a></li>
-                          <li><a href="#">7673867</a></li>
+                          <li><a href="#">695572</a></li>
                           <li><a href="#">India</a></li>
 
                       </ul>
