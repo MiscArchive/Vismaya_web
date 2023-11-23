@@ -103,9 +103,12 @@
                                 class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
                                 <img src="{{ asset('assets/img/category/branch.png') }}" alt="flower" class="img-fluid">
                             </div>
-                            <a href="{{ filled($branch->location_link) ? $branch->location_link : '#' }}" class="text-dark fs-sm fw-bold d-block mt-3" target="_blank">{{ $branch->name }}</a>
+                            <a href="{{ filled($branch->location_link) ? $branch->location_link : '#' }}"
+                                class="text-dark fs-sm fw-bold d-block mt-3" target="_blank">{{ $branch->name }}</a>
                             {{-- <span class="total-count position-relative ps-3 fs-sm fw-medium doted-primary">25 Items</span> --}}
-                            <a href="{{ filled($branch->location_link) ? $branch->location_link : '#' }}" class="explore-btn position-absolute" target="_blank"><i class="fa-solid fa-arrow-up"></i></a>
+                            <a href="{{ filled($branch->location_link) ? $branch->location_link : '#' }}"
+                                class="explore-btn position-absolute" target="_blank"><i
+                                    class="fa-solid fa-arrow-up"></i></a>
                         </div>
                     </div>
                 @endforeach
@@ -130,7 +133,7 @@
         <img src="{{ asset('assets/img/shapes/mashrom.png') }}" alt="mashrom" class="position-absolute mashrom z--1"
             data-parallax="{&quot;x&quot;: 100}"
             style="transform:translate3d(48.388px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(48.388px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
-        <div class="container">
+        <div class="container mt-5">
             <div class="row justify-content-center">
                 <div class="col-xl-6">
                     <div class="section-title text-center">
@@ -140,7 +143,40 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center g-4 mt-5">
+            <section class="offer-section hm3-offer-section mt-3">
+                <div class="container">
+                    <div class="products-slider-wrapper position-relative">
+                        <div class="offer-product-slider swiper ">
+                            <div class="swiper-wrapper">
+                                @foreach ($products as $product)
+                                    <div class="swiper-slide">
+                                        <div class="vertical-product-card rounded-2 position-relative border-0 bg-white" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+                                            <span
+                                                class="offer-badge text-white fw-bold fs-xxs bg-success position-absolute start-0 top-0">Offer</span>
+                                            <div class="thumbnail position-relative text-center p-4">
+                                                <img src="{{ asset('uploads/' . $product->image) }}" alt="offer"
+                                                    class="img-fluid" width="80%">
+                                            </div>
+                                            <div class="card-content text-center">
+                                                <h5 class="card-title fw-bold d-block mb-2">{{ $product->title }}</h5>
+                                                <p>
+                                                    {{ strip_tags($product->description) }}
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        <button class="ofp-slider-prev" style="margin-top: -13%;"><i
+                                class="fas fa-angle-left"></i></button>
+                        <button class="ofp-slider-next" style="margin-top: -13%;"><i
+                                class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </section>
+                    {{-- <div class="row justify-content-center g-4 mt-5">
                 <div class="products-slider-wrapper mt-8 position-relative">
                     <div class="swiper pb-6">
 
@@ -171,10 +207,8 @@
                     <button style="margin-bottom: 150px;" class="ofp-slider-prev"><i class="fas fa-angle-left"></i></button>
                     <button style="margin-bottom: 150px;" class="ofp-slider-next"><i class="fas fa-angle-right"></i></button>
                 </div>
-            </div>
-
-        </div>
-    </section>
+            </div> --}}
+                    {{-- </div> --}}
 
     <section id="testimonials">
         <section style="margin-top:50px;"
@@ -294,7 +328,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
 <script>
     // Initialize Swiper when the document is ready
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         var mySwiper = new Swiper('.swiper', {
             // Swiper configuration options here
             slidesPerView: 4, // Show three slides at a time
