@@ -28,7 +28,7 @@ class PageController extends Controller
 
         $banners = Banner::where('establishment_id', $establishment->id)->where('status', 1)->get();
         $branches = Branch::where('establishment_id', $establishment->id)->where('status', 1)->get();
-        $testimonials = Testimonial::where('status', 1)->where('establishment_id', $establishment)->get();
+        $testimonials = Testimonial::where('status', 1)->where('establishment_id', $establishment->id)->get();
         $products = CardItem::where('establishment_id', $establishment->id)->where('is_featured', 1)->where('status', 1)->get();
         $offers = CardItem::where('type', 'offer')->where('is_featured', 1)->distinct('establishment_id')->get();
         view()->share('establishment', $establishment);
