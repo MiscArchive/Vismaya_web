@@ -28,7 +28,7 @@
                                             </div>
                                             <h1 class="display-4 mb-3">{{ $banner->establishment->name }}</h1>
                                             <p class="mb-6">
-                                                {{ Str::limit(strip_tags($banner->establishment->description), 150) }}
+                                                {!! Str::limit(strip_tags($banner->establishment->description), 150) !!}
                                             </p>
                                             <a href="{{ route('establishment', $banner->establishment->slug) }}"
                                                 class="btn btn-primary">Explore More<span class="ms-2"><i
@@ -162,7 +162,7 @@
                                                 <div class="card-content text-center">
                                                     <h5 class="card-title fw-bold d-block mb-2">{{ $product->title }}</h5>
                                                     <p>
-                                                        {{ strip_tags($product->description) }}
+                                                        {!! strip_tags($product->description) !!}
 
                                                     </p>
                                                 </div>
@@ -242,7 +242,7 @@
                                                 </div>
                                             </div>
                                             <p class="mb-0">
-                                                “{{ Str::limit(strip_tags($testimonial->description), 350) }}”
+                                                “{!! Str::limit(strip_tags($testimonial->description), 350) !!}”
                                             </p>
                                         </div>
                                     @endforeach

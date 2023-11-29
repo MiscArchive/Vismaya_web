@@ -30,7 +30,7 @@
                                                 </div>
                                                 <h1 class="display-4 mb-3">{{ $banner->establishment->name }}</h1>
                                                 <p class="mb-6">
-                                                    {{ Str::limit(strip_tags($banner->establishment->description), 150) }}
+                                                    {!! Str::limit(strip_tags($banner->establishment->description), 150) !!}
                                                 </p>
                                                 <a href="{{ route('establishment', $banner->establishment->slug) }}"
                                                     class="btn btn-primary">Explore More<span class="ms-2"><i
@@ -223,7 +223,7 @@
                                         <h3 class="mb-3">{{ $offer->title }}</h3>
                                     </a>
                                     <p class="mb-4"></p>
-                                    {{ Str::limit(strip_tags($offer->description), 450) }}
+                                    {!! Str::limit(strip_tags($offer->description), 450) !!}
 
                                 </div>
                             </div>
@@ -375,7 +375,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <p class="mb-0">“{{ Str::limit(strip_tags($testimonial->description), 350) }}”
+                                        <p class="mb-0">“{!! Str::limit(strip_tags($testimonial->description), 350) !!}”
                                         </p>
                                     </div>
                                 @endforeach
