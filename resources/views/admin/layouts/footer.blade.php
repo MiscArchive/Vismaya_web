@@ -7,7 +7,7 @@
             <div class="col-sm-6">
                 <script>
                     document.write(new Date().getFullYear())
-                </script> © Cocoon. developed by <a href="www.miscarchive.com">MiscArchive</a>
+                </script> © Vismaya. developed by <a href="www.miscarchive.com">MiscArchive</a>
             </div>
             <div class="col-sm-6">
                 <div class="text-sm-end d-none d-sm-block">

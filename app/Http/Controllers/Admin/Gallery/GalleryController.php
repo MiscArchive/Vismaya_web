@@ -7,6 +7,7 @@ use App\Actions\Gallery\UpdateGalleryAction;
 use App\DataTables\Gallery\GalleryDataTable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Gallery\CreateGalleryRequest;
+use App\Models\Establishment;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,8 @@ class GalleryController extends Controller
 
     public function create()
     {
-        return view('admin.gallery.create');
+        $establishments = Establishment::active()->get();
+        return view('admin.gallery.create', compact('establishments'));
     }
 
 
@@ -29,11 +31,10 @@ class GalleryController extends Controller
     {
         try {
             $response = $createGalleryAction->execute(collect($request->validated()));
-
             if (!$response) {
                 return redirect()->back()->withErrors('Failed to create Galley!');
             }
-            return redirect()->route('gallery.index')->withSuccess('Gallery created successfully');
+            return redirect()->back()->withSuccess('Gallery created successfully');
         } catch (\Throwable $th) {
             return redirect()->back()->withErrors('Something went wrong,Please try again!');
         }
@@ -41,7 +42,8 @@ class GalleryController extends Controller
 
     public function edit(Gallery $gallery)
     {
-        return view('admin.gallery.edit',compact('gallery'));
+        $establishments = Establishment::active()->get();
+        return view('admin.gallery.edit',compact(['gallery', 'establishments']));
     }
 
     public function update(CreateGalleryRequest $request, Gallery $gallery, UpdateGalleryAction $updateGalleryAction)

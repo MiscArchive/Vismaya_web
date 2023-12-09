@@ -23,9 +23,14 @@ class GalleryDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addIndexColumn()
+            ->editColumn('establishment_id', function ($query) {
+                return $query->establishment ? $query->establishment->name : '';
+            })
             ->addColumn('file', function ($query) {
                 if (filled($query->image)) {
-                    return '<a href="'.asset('uploads/' . $query->image).'" class="badge bg-secondary-subtle text-secondary badge-border" target="_blank">View</a>';
+
+                    return '<a href="'.asset('uploads/' . $query->image).'"><img class="rounded avatar-md" alt="200x200" width="50" src="'.asset('uploads/' . $query->image).'"></a>';
+                    // return '<a href="'.asset('uploads/' . $query->image).'" class="badge bg-secondary-subtle text-secondary badge-border" target="_blank">View</a>';
                 }
                 if (filled($query->video_url)) {
                     return '<a href="'.asset('uploads/' . $query->video_url).'" class="badge bg-secondary-subtle text-secondary badge-border" target="_blank">View</a>';
@@ -37,7 +42,7 @@ class GalleryDataTable extends DataTable
                 $deleteBtn = '<button class="btn btn-danger btn-icon btn-sm remove-item-btn" onClick="deleteGallery(' . $query->id . ')" style="margin-left:10px;"><i class="ph-trash" title="Delete"></i></button>';
                 return $editBtn . $deleteBtn;
             })
-            ->rawColumns(['file', 'actions']);
+            ->rawColumns(['file', 'actions', 'establishment_id']);
     }
 
     /**
@@ -45,7 +50,7 @@ class GalleryDataTable extends DataTable
      */
     public function query(Gallery $model): QueryBuilder
     {
-        return $model->newQuery();
+        return $model->newQuery()->with('establishment');
     }
 
     /**
@@ -71,6 +76,12 @@ class GalleryDataTable extends DataTable
                 'title' => '#',
                 'className' => 'text-center',
                 'data' => 'DT_RowIndex',
+            ],
+            [
+                'name' => 'establishment_id',
+                'title' => 'Establishment',
+                'className' => 'text-center',
+                'data' => 'establishment_id',
             ],
             [
                 'name' => 'type',
