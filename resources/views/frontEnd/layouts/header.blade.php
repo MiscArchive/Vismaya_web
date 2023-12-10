@@ -16,6 +16,7 @@
     <meta name="author" content="ThemeTags">
     <meta name="keywords"
         content="">
+
     <!--favicon icon-->
     {{-- <link rel="icon" href="{{ asset('uploads/'.$settings->favicon) }}" type="image/png" sizes="16x16"> --}}
 

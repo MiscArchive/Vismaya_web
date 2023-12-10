@@ -1,10 +1,28 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 
 @section('content')
     <div class="container-fluid">
-
-
-        <div class="card" style="margin-bottom:100px; ">
+        <div class="card">
+            @if ($message = Session::get('success'))
+                <div class="alert alert-success alert-dismissible alert-label-icon rounded-label fade show" role="alert">
+                    <i class="ri-check-double-line label-icon"></i><strong>{{ $message }}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            <div class="alert alert-success alert-dismissible alert-label-icon rounded-label fade show" role="alert"
+                id="successMessage" style="display: none;">
+                <i class="ri-check-double-line label-icon"></i><strong></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                    <div class="alert alert-danger alert-dismissible alert-label-icon rounded-label fade show"
+                        role="alert">
+                        <i class="ri-error-warning-line label-icon"></i><strong>{{ $error }}</strong <button
+                            type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endforeach
+            @endif
 
             <div class="card">
                 <div class="card-body">
@@ -28,7 +46,19 @@
                     @csrf
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
+                                <label for="title" class="form-label text-muted">Establishment</label>
+                                <select class="form-select mb-3" name="establishment_id">
+                                    <option selected disabled>Choose</option>
+                                    @foreach ($establishments as $establishment)
+                                        <option value="{{ $establishment->id }}">{{ $establishment->name }}</option>
+                                    @endforeach
+                                </select>
+                                @if ($errors->has('establishment_id'))
+                                    <span class="text-danger">{{ $errors->first('establishment_id') }}</span>
+                                @endif
+                            </div>
+                            <div class="col-md-6" style="display: none;">
                                 <div>
                                     <label for="type" class="form-label text-muted">Type</label>
                                     <select name="type" id="gallery_type" class="form-control">
@@ -40,10 +70,10 @@
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-                        </div>
+                        {{-- </div> --}}
 
-                        <div class="row mt-4">
-                            <div class="col-md-12">
+                        {{-- <div class="row mt-4"> --}}
+                            <div class="col-md-6">
                                 <div id="image_div" style="display: block;">
                                     <label for="image" class="form-label text-muted">Image</label>
                                     <input type="file" class="form-control" name="image">

@@ -28,6 +28,7 @@ class UpdateGalleryAction
             }
 
             $gallery->type = $collection->get('video_url') ? 'video' : 'image';
+            $gallery->establishment_id = $collection->get('establishment_id');
 
             if ($gallery->save()) {
                 return true;
@@ -38,6 +39,5 @@ class UpdateGalleryAction
             dd($th);
             return false;
         }
-
     }
 }

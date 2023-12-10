@@ -38,6 +38,7 @@ class EstablishmentDataTable extends DataTable
             return '<span class="badge bg-warning">In-Active</span>';
         })
         ->addColumn('actions', function ($query) {
+
             $editBtn = '<a href="' . route('establishments.edit', $query->id) . '" class="btn btn-info btn-icon btn-sm remove-item-btn"><i class="bx bx-edit" title="Edit"></i></a>';
 
             $deleteBtn = '<button class="btn btn-danger btn-icon btn-sm remove-item-btn" onClick="deleteEstablishment(' . $query->id . ')" style="margin-left:10px;"><i class="ph-trash" title="Delete"></i></button>';

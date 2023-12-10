@@ -22,6 +22,7 @@ class CreateGalleryRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'establishment_id' => ['required'],
             'type' => ['required'],
             'image' => ['required_if:type,image'],
             'video_url' => ['required_if:type,video'],

@@ -12,6 +12,7 @@ class CreateGalleryAction
         try {
             $gallery = new Gallery();
             $gallery->type = $collection->get('type');
+            $gallery->establishment_id = $collection->get('establishment_id');
             $gallery->image = $collection->has('image') ? $collection->get('image')->store('gallery', 'uploads') : NULL;
             $gallery->video_url = $collection->get('video_url');
             if ($gallery->save()) {

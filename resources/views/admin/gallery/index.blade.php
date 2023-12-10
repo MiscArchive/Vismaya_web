@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-bottom: 50px;">
 
 
         <div class="card">
