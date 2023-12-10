@@ -204,7 +204,7 @@
     @if (filled($galleries))
         <section class="grostore-team-section pt-6 bg-shade position-relative z-1 overflow-hidden"
             style="margin-top: 150px;padding-bottom:180px;">
-            <img src="assets/img/shapes/bg-shape-5.png" alt="bg shape"
+            <img src="{{ asset('assets/img/shapes/bg-shape-5.png') }}" alt="bg shape"
                 class="position-absolute start-0 bottom-0 z--1 w-100">
             <div class="container-fluid" style="width: 90%;">
                 <div class="row align-items-center g-3">

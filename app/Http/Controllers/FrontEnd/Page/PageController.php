@@ -34,6 +34,7 @@ class PageController extends Controller
         $products = CardItem::where('establishment_id', $establishment->id)->where('is_featured', 1)->where('status', 1)->get();
         $offers = CardItem::where('type', 'offer')->where('is_featured', 1)->distinct('establishment_id')->get();
         view()->share('establishment', $establishment);
-        return view('frontEnd.pages.branch', compact(['establishment', 'banners', 'branches', 'products', 'testimonials','offers']));
+        $galleries = Gallery::where('establishment_id', $establishment->id)->where('status', 1)->inRandomOrder()->get();
+        return view('frontEnd.pages.branch', compact(['establishment', 'banners', 'branches', 'products', 'testimonials','offers', 'galleries']));
     }
 }
