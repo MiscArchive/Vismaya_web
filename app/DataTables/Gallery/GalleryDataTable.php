@@ -50,7 +50,7 @@ class GalleryDataTable extends DataTable
      */
     public function query(Gallery $model): QueryBuilder
     {
-        return $model->newQuery()->with('establishment');
+        return $model->newQuery()->with('establishment')->latest();
     }
 
     /**
@@ -83,12 +83,12 @@ class GalleryDataTable extends DataTable
                 'className' => 'text-center',
                 'data' => 'establishment_id',
             ],
-            [
-                'name' => 'type',
-                'title' => 'Type',
-                'className' => 'text-center',
-                'data' => 'type',
-            ],
+            // [
+            //     'name' => 'type',
+            //     'title' => 'Type',
+            //     'className' => 'text-center',
+            //     'data' => 'type',
+            // ],
             [
                 'name' => 'file',
                 'title' => 'File',

@@ -7,6 +7,7 @@ use App\Models\Banner;
 use App\Models\Branch;
 use App\Models\CardItem;
 use App\Models\Establishment;
+use App\Models\Gallery;
 use App\Models\Setting;
 use App\Models\Testimonial;
 
@@ -19,7 +20,8 @@ class PageController extends Controller
         $banners = Banner::where('status', 1)->distinct('establishment_id')->get();
         $testimonials = Testimonial::where('status', 1)->distinct('establishment_id')->get();
         $offers = CardItem::where('type', 'offer')->where('is_featured', 1)->distinct('establishment_id')->get();
-        return view('frontEnd.pages.welcome', compact(['settings', 'establishments', 'banners', 'testimonials','offers']));
+        $galleries = Gallery::where('status', 1)->inRandomOrder()->distinct('establishment_id')->get();
+        return view('frontEnd.pages.welcome', compact(['settings', 'establishments', 'banners', 'testimonials','offers', 'galleries']));
     }
 
     public function branch($slug)

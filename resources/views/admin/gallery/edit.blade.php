@@ -50,7 +50,7 @@
                                     <span class="text-danger">{{ $errors->first('establishment_id') }}</span>
                                 @endif
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6" style="display: none;">
                                 <div>
                                     <label for="type" class="form-label text-muted">Type</label>
                                     <select name="type" id="gallery_type" class="form-control">
@@ -63,11 +63,11 @@
                                 @error('type')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
-                            </div>
+                            {{-- </div> --}}
                         </div>
 
-                        <div class="row mt-4">
-                            <div class="col-md-12">
+                        {{-- <div class="row mt-4"> --}}
+                            <div class="col-md-6">
                                 <div id="image_div" style="display: block;">
                                     <label for="image" class="form-label text-muted">Image</label>
                                     <input type="file" class="form-control" name="image" id="image">
@@ -84,12 +84,13 @@
                                 @error('video_url')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
-                            </div>
-
-                            @if ($gallery->image)
+                                @if ($gallery->image)
                                 <img src="{{ asset('uploads/' . $gallery->image) }}" alt=""
                                     class="rounded avatar-md mt-2">
                             @endif
+                            </div>
+
+
                         </div>
                     </div>
 
