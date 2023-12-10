@@ -215,8 +215,64 @@
             </div> --}}
         {{-- </div> --}}
 
+        @if (filled($galleries))
+        <section class="grostore-team-section pt-6 bg-shade position-relative z-1 overflow-hidden"
+            style="margin-top: 200px;padding-bottom:180px;">
+            <img src="{{ asset('assets/img/shapes/bg-shape-5.png') }}" alt="bg shape"
+                class="position-absolute start-0 bottom-0 z--1 w-100">
+            <div class="container-fluid" style="width: 90%;">
+                <div class="row align-items-center g-3">
+                    <div class="col-xl-3">
+                        <div class="section-title">
+                            <div class="d-flex align-items-center gap-2 flex-wrap">
+                                <h6 class="mb-0 gshop-subtitle text-secondary">Vismaya Synchronicity Showcase</h6>
+                                <span>
+                                    <svg width="58" height="10" viewBox="0 0 58 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="-6.99382e-08" y1="5.2" x2="52" y2="5.2"
+                                            stroke="#FF7C08" stroke-width="1.6" />
+                                        <path d="M58 5L50.5 9.33013L50.5 0.669872L58 5Z" fill="#FF7C08" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <h2 class="mb-3">Explore the Essence of Vismaya</h2>
+                            <p class="mb-7" style="">Discover a unique symphony of experiences in every Vismaya
+                                venture.
+                                Delight and define your moments in our diverse world</p>
+                            <div class="d-flex align-items-center gap-3">
+                                <button type="button" class="team-slider-prev-btn team-slider-btn"><i
+                                        class="fas fa-angle-left"></i></button>
+                                <button type="button" class="team-slider-next-btn team-slider-btn"><i
+                                        class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9">
+                        <div class="swiper team-slider">
+                            <div class="swiper-wrapper">
+                                @foreach ($galleries as $gallery)
+                                    <div class="team-card text-center bg-white rounded py-7 px-4 swiper-slide"
+                                        style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">
+                                        <div class="mb-5" style="max-height:250px; overflow: hidden;min-height:250px;">
+
+                                            <img src="{{ asset('uploads/' . $gallery->image) }}" alt="team"
+                                                class="img-fluid" style="width: 100%; height: auto; object-fit: cover;">
+
+
+                                        </div>
+                                    </div>
+                                @endforeach
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section> <!--team section end-->
+    @endif
         <section id="testimonials">
-            <section style="margin-top:50px;"
+            <section style="margin-top:100px;"
                 class="feedback-section pt-120 has-banner-bottom position-relative z-1 overflow-hidden bg-floral-white">
                 <div id="testimonials" class="container">
                     <div class="row align-items-center g-4">
