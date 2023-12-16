@@ -48,9 +48,9 @@
                       <h5 class="text-white mb-4">Call US</h5>
                       <ul class="footer-nav">
                           <li><a href="#">Tel</a></li>
-                          <li><a href="#">0471 2803335</a></li>
+                          <li><a href="#">0471 2291295</a></li>
                           <li><a href="#">Mobile</a></li>
-                          <li><a href="#">9855550100</a></li>
+                          <li><a href="#">8593011145</a></li>
                       </ul>
                   </div>
               </div>
