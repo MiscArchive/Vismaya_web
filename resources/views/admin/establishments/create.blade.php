@@ -91,7 +91,7 @@
                         <div class="col-md-4">
                             <div>
                                 <label for="title" class="form-label text-muted">Telephone</label>
-                                <input type="number" class="form-control" id="telephone" name="telephone">
+                                <input type="text" class="form-control" id="telephone" name="telephone">
                             </div>
                             @if ($errors->has('telephone'))
                                 <span class="text-danger">{{ $errors->first('telephone') }}</span>
@@ -104,7 +104,7 @@
                         <div class="col-md-4">
                             <div>
                                 <label for="title" class="form-label text-muted">Mobile</label>
-                                <input type="mobile" class="form-control" id="mobile" name="mobile">
+                                <input type="text" class="form-control" id="mobile" name="mobile">
                             </div>
                             @if ($errors->has('mobile'))
                                 <span class="text-danger">{{ $errors->first('mobile') }}</span>
